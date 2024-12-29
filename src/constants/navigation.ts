@@ -1,4 +1,14 @@
 export const navigation = [
-    "Our Projects",
-    "Contact Us"
-  ];
+    {
+      name: "Services",
+      href: "/",
+    },
+    {
+      name: "Projects",
+      href: "/projects",
+    },
+    {
+      name: "Contact",
+      href: "/",
+    }
+  ]

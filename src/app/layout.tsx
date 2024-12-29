@@ -6,6 +6,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PopupWidget }  from "@/components/PopupWidget";
+import AppProvider from "../components/AppContext";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,6 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <AppProvider >
       <body className={`${inter.className} max-w-[100%] mx-auto sm:max-w-[95%] md:max-w-[90%] xl:max-w-[85%] `}>
         <ThemeProvider attribute="class">
           <Navbar />
@@ -30,6 +32,7 @@ export default function RootLayout({
           <PopupWidget />
         </ThemeProvider>
       </body>
+      </AppProvider>
     </html>
   );
 }
