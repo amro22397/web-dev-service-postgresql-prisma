@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} max-w-[100%] mx-auto sm:max-w-[95%] md:max-w-[90%] xl:max-w-[85%] `}>
         <ThemeProvider attribute="class">
           <Navbar />
           <div>{children}</div>

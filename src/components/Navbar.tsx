@@ -6,11 +6,8 @@ import { Disclosure } from "@headlessui/react";
 
 export const Navbar = () => {
   const navigation = [
-    "Product",
-    "Features",
-    "Pricing",
-    "Company",
-    "Blog",
+    "Our Projects",
+    "Contact Us"
   ];
 
   return (
@@ -25,10 +22,22 @@ export const Navbar = () => {
                   width="32"
                   alt="N"
                   height="32"
-                  className="w-8"
+                  className="w-8 hidden"
                 />
               </span>
-            <span>Nextly</span>
+            <div className="flex flex-col items-center relative">
+
+            <span
+            className="font-semibold tracking-wide"
+            style={{fontFamily: "Century Gothic"}}
+            >Web Dev Service</span>
+
+<span 
+        style={{fontFamily: "Century Gothic"}}
+        className="text-sm absolute top-[27.04px] right-[0px]
+        font-bold tracking-widest">Oman</span>
+        
+            </div>
           </span>
         </Link>
 
@@ -36,8 +45,11 @@ export const Navbar = () => {
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
             <ThemeChanger />
             <div className="hidden mr-3 lg:flex nav__item">
-              <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-                Get Started
+              <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5
+              text-[16.7px] hover:bg-indigo-700 active:bg-indigo-800"
+              style={{fontFamily: "Trebuchet MS"}}
+              >
+                Request Website
               </Link>
             </div>
         </div>
@@ -71,12 +83,15 @@ export const Navbar = () => {
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
+                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md
+                       dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
+                        dark:focus:bg-gray-800 focus:outline-none hover:underline">
                           {item}
                       </Link>
                     ))}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">         
-                        Get Started
+                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white
+                     bg-indigo-600 rounded-md lg:ml-5 text-[16.7px] hover:bg-indigo-700 active:bg-indigo-800">         
+                    Request Website
                     </Link>
                   </>
                 </Disclosure.Panel>
@@ -84,12 +99,15 @@ export const Navbar = () => {
           )}
         </Disclosure>
         
-        {/* menu  */}
+        {/* menu lg and above */}
         <div className="hidden text-center lg:flex lg:items-center">
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
-                <Link href="/" className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+                <Link href="/" className="inline-block px-4 py-2 text-lg font-normal
+                 text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500
+                  focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800
+                  hover:underline">
                     {menu}
                 </Link>
               </li>
