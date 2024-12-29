@@ -3,12 +3,10 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
+import { navigation } from "../constants/navigation"
 
 export const Navbar = () => {
-  const navigation = [
-    "Our Projects",
-    "Contact Us"
-  ];
+  
 
   return (
     <div className="w-full">

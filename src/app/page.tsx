@@ -12,6 +12,8 @@ export default function Home() {
   return (
     <Container>
       <Hero />
+      
+      <div className="hidden">
       <SectionTitle
         preTitle="Nextly Benefits"
         title=" Why should you use this landing page"
@@ -20,10 +22,14 @@ export default function Home() {
         and indie projects. Its built with Next.js & TailwindCSS. And its
         completely open-source.
       </SectionTitle>
+      </div>
 
+      <div className="hidden">
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
+      </div>
 
+      <div className="hidden">
       <SectionTitle
         preTitle="Watch a video"
         title="Learn how to fullfil your needs"
@@ -34,7 +40,9 @@ export default function Home() {
       </SectionTitle>
 
       <Video videoId="fZ0D0cnR88E" />
+      </div>
 
+      <div className="hidden">
       <SectionTitle
         preTitle="Testimonials"
         title="Here's what our customers said"
@@ -49,9 +57,13 @@ export default function Home() {
         Answer your customers possible questions here, it will increase the
         conversion rate as well as support or chat requests.
       </SectionTitle>
-
       <Faq />
+
       <Cta />
+      </div>
+
+      
+      
     </Container>
   );
 }

@@ -2,16 +2,19 @@ import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
+import { navigation } from "../constants/navigation"
 
 export function Footer() {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
   const legal = ["Terms", "Privacy", "Legal"];
+  const socialClassName = "hover:scale-105";
+
   return (
     <div className="relative">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
+        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-0 border-t
+         border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <div>
+            <div className="hidden">
               {" "}
               <Link
                 href="/"
@@ -28,13 +31,13 @@ export function Footer() {
               </Link>
             </div>
 
-            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nextly is a free landing page & marketing website template for
-              startups and indie projects. Its built with Next.js & TailwindCSS.
-              And its completely open-source.
+            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400
+            text-md">
+              This is a service that helps you build a website for your business. All rights
+              are reserved and the illegal use of the source code is forbidden.
             </div>
 
-            <div className="mt-5">
+            <div className="mt-5 hidden">
               <a
                 href="https://vercel.com/?utm_source=web3templates&utm_campaign=oss"
                 target="_blank"
@@ -51,7 +54,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="">
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
                 <Link
@@ -77,50 +80,55 @@ export function Footer() {
               ))}
             </div>
           </div>
-          <div className="">
+          <div className="flex flex-col items-center">
             <div>Follow us</div>
-            <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
+            <div className="flex mt-4 gap-5 text-gray-400 dark:text-gray-500">
               <a
-                href="https://twitter.com/web3templates"
+                href="https://www.facebook.com/profile.php?id=61571211236756"
                 target="_blank"
                 rel="noopener"
-              >
-                <span className="sr-only">Twitter</span>
-                <Twitter />
-              </a>
-              <a
-                href="https://facebook.com/web3templates"
-                target="_blank"
-                rel="noopener"
+                className={`${socialClassName}`}
               >
                 <span className="sr-only">Facebook</span>
                 <Facebook />
               </a>
               <a
-                href="https://instagram.com/web3templates"
+                href=""
                 target="_blank"
                 rel="noopener"
+                className={`${socialClassName}`}
               >
                 <span className="sr-only">Instagram</span>
                 <Instagram />
               </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener">
+              <a href="" target="_blank" rel="noopener" className={`${socialClassName}`}>
                 <span className="sr-only">Linkedin</span>
                 <Linkedin />
+              </a>
+              <a
+                href="https://twitter.com/web3templates"
+                target="_blank"
+                rel="noopener"
+                className={`${socialClassName}`}
+              >
+                <span className="sr-only">Twitter</span>
+                <Twitter />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
-          Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <a href="https://web3templates.com/" target="_blank" rel="noopener">
-            Web3Templates.
+        <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400
+        flex flex-col gap-[2.5px]">
+          <div className="">Copyright © {new Date().getFullYear()}</div>
+
+          <div className="">
+          Made with by{" "}
+          <a href="" target="_blank" rel="noopener">
+            Web Dev Service.
           </a>{" "}
-          Illustrations from{" "}
-          <a href="https://www.glazestock.com/" target="_blank" rel="noopener ">
-            Glazestock
-          </a>
+          </div>
+          
         </div>
       </Container>
       {/* Do not remove this */}
@@ -182,7 +190,9 @@ const Backlink = () => {
       href="https://web3templates.com"
       target="_blank"
       rel="noopener"
-      className="absolute flex px-3 py-1 space-x-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded shadow-sm place-items-center left-5 bottom-5 dark:bg-trueGray-900 dark:border-trueGray-700 dark:text-trueGray-300"
+      className="absolute flex px-3 py-1 space-x-2 text-sm font-semibold text-gray-900 hidden
+       bg-white border border-gray-300 rounded shadow-sm place-items-center left-5 bottom-5
+        dark:bg-trueGray-900 dark:border-trueGray-700 dark:text-trueGray-300"
     >
       <svg
         width="20"

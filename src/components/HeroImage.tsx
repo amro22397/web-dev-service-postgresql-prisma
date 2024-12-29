@@ -6,9 +6,9 @@ const HeroImage = () => {
     <div className="flex items-start justify-center w-full lg:w-1/2">
                 <div className="">
                   <Image
-                    src={"/top11.png"}
+                    src={"/site-internet-icon-png-27.png"}
                     blurDataURL={'/top11.png'}
-                    width="616"
+                    width="350"
                     height="617"
                     className={"object-cover"}
                     alt="Hero Illustration"
