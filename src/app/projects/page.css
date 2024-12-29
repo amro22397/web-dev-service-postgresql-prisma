@@ -7,8 +7,9 @@
 }
 
 #filter-key {
-  @apply bg-yellow-600 px-4 py-[2px] font-sans text-white  cursor-pointer
-  text-lg transform hover:scale-105 hover:transition-all duration-500
+  @apply bg-indigo-600 px-4 py-[5px] font-sans text-white  cursor-pointer
+  text-xl transform hover:scale-105 hover:transition-all duration-500 rounded-lg
+  active:scale-95
 }
 
 /* width */

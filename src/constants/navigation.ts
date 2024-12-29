@@ -9,6 +9,6 @@ export const navigation = [
     },
     {
       name: "Contact",
-      href: "/",
+      href: "/contact",
     }
   ]

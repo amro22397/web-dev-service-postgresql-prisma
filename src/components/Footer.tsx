@@ -106,7 +106,7 @@ export function Footer() {
                 <Linkedin />
               </a>
               <a
-                href="https://twitter.com/web3templates"
+                href="/"
                 target="_blank"
                 rel="noopener"
                 className={`${socialClassName}`}
