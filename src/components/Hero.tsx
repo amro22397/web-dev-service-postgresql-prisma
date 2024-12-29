@@ -1,25 +1,15 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import heroImg from "../../public/img/hero.png";
+import HeroText from "./HeroText"
+import HeroImage from "./HeroImage";
 
 export const Hero = () => {
   return (
     <>
       <Container className="flex flex-wrap ">
-        
-        <div className="flex items-center justify-center w-full lg:w-1/2">
-          <div className="">
-            <Image
-              src={heroImg}
-              width="616"
-              height="617"
-              className={"object-cover"}
-              alt="Hero Illustration"
-              loading="eager"
-              placeholder="blur"
-            />
-          </div>
-        </div>
+        <HeroText />
+        <HeroImage />
+
       </Container>
       <Container>
         <div className="flex flex-col justify-center">
