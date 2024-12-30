@@ -56,7 +56,9 @@ export const Navbar = () => {
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item">
-                <Link href={menu.href} key={index} className={`w-full px-1 py-2 text-gray-500 rounded-md
+                <Link href={menu.href} key={index}
+                onClick={() => setShowRequestForm(false)}
+                className={`w-full px-1 py-2 text-gray-500 rounded-md
                        dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
                         dark:focus:bg-gray-800 focus:outline-none hover:underline
                         ${menu.isHidden ? "hidden" : ""}`}>
@@ -70,7 +72,7 @@ export const Navbar = () => {
             <ThemeChanger />
             <div className="hidden mr-3 lg:flex nav__item">
               <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-3
-              text-[16.7px] hover:bg-indigo-700 active:bg-indigo-800"
+              text-[16.7px] hover:bg-indigo-700 active:bg-indigo-800 hidden"
               style={{fontFamily: "Trebuchet MS"}}
               onClick={() => setShowRequestForm(!showRequestForm)}
               >

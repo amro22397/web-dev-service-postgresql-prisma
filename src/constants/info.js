@@ -14,7 +14,7 @@ export const info = [
     {
       icon: <FaEnvelope />,
       title: "Email",
-      description: "a@gmail.com"
+      description: "admin@wds-oman.com"
     },
     {
       icon: <FaMapMarkerAlt />,

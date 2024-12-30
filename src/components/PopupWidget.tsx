@@ -9,6 +9,67 @@ import {
 } from "@headlessui/react";
 
 export function PopupWidget() {
+
+
+  /* const handleChange = () => {
+        setMessageSuccess(false);
+        setError('');
+      }
+      
+      
+          const [loading, setLoading] = useState(false);
+          const [error, setError] = useState('');
+          const [messageSuccess, setMessageSuccess] = useState(false);
+      
+          const handleSubmit = async (e : any) => {
+              e.preventDefault();
+      
+              const formData = new FormData(e.target);
+      
+                formData.append("access_key", "fdfbe3b9-e72d-44f0-a653-9be0118a84c3");
+      
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+      
+              if (yourName === '' || phoneNumber === '' || email === '' || message === '' || whatsappNumber === '') {
+                setMessageSuccess(false);
+                
+                return;
+              }
+      
+              setLoading(true);
+      
+              const res = await fetch('https://api.web3forms.com/submit', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    Accept: "application/json"
+                  },
+                  body: json,
+                });
+      
+                if (res.ok) {
+                  setMessageSuccess(true);
+                    setYourName('');
+                    setEmail('');
+                    setPhoneNumber('');
+                    setWhatsappNumber('');
+                    setMessage('');
+                } else {
+                  setMessageSuccess(false)
+                }
+                const result = await res.json();
+                if (result.success) {
+                    console.log(result);
+                    
+                }
+      
+                setLoading(false)
+      
+          }
+
+*/
+
   const {
     register,
     handleSubmit,
@@ -18,9 +79,6 @@ export function PopupWidget() {
   } = useForm({
     mode: "onTouched",
   });
-
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [Message, setMessage] = useState("");
 
   const userName = useWatch({ control, name: "name", defaultValue: "Someone" });
 
@@ -62,7 +120,7 @@ export function PopupWidget() {
   };
 
   return (
-    <div>
+    <div className="hidden">
       <Disclosure>
         {({ open }) => (
           <>

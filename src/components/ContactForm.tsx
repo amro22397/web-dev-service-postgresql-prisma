@@ -14,10 +14,14 @@ import { Input } from "@/components/ui/input"
 
 import { Textarea } from "@/components/ui/textarea"
 
+import { IoMdClose } from "react-icons/io";
+
 import Link from 'next/link'
 
 
-const ContactForm = () => {
+const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
+    isAbsolute : boolean, showRequestForm: boolean, setShowRequestForm: any
+}) => {
 
     const [yourName, setYourName] = useState('');
       const [email, setEmail] = useState('');
@@ -87,10 +91,18 @@ const ContactForm = () => {
         const inputClassName = 'bg-white border-none rounded-xl text-black placeholder-gray-400';
 
   return (
-    <div className="xl:h-[54%] order-2 xl:order-none">
+    <div className={`xl:h-[54%] order-2 xl:order-none 
+        ${isAbsolute ? "absolute top-[8.27rem] bottom-0 left-0 right-0 h-full max-w-[600px] mx-auto" : ""}`}>
+
+            {isAbsolute && (
+                <IoMdClose className='absolute right-3 top-3 text-2xl
+                hover:text-black/80 cursor-pointer hover:scale-95'
+                onClick={() => setShowRequestForm(false)} />
+            )}
 
             <form onSubmit={handleSubmit}
-            className="flex flex-col gap-6 p-10 bg-indigo-300/90">
+            className={`flex flex-col gap-6 p-10 bg-indigo-300/90 
+            ${isAbsolute ? "bg-indigo-300/95" : ""}`}>
               <h3 className="text-4xl text-stone-600"
               style={{fontFamily: "Trebuchet MS"}}>Let's work together</h3>
               <p className="text-black">
@@ -101,28 +113,39 @@ const ContactForm = () => {
 
               <Input type="name" placeholder="Your Name" name="Customer Name"
               className={`${inputClassName}`}
-              value={yourName} onChange={e => setYourName(e.target.value)}
+              value={yourName} onChange={e => {
+                handleChange();
+                setYourName(e.target.value)
+              }}
               style={{borderRadius: ".25rem"}} />
               
               <Input type="email" placeholder="Email address" name="Email address"
               className={`${inputClassName}`}
-              value={email} onChange={e => setEmail(e.target.value)}
+              value={email} onChange={e => {
+                handleChange();
+                setEmail(e.target.value)
+              }}
               style={{borderRadius: ".25rem"}} />
 
               <Input type="phone" placeholder="Phone number" name="Phone number"
               className={`${inputClassName}`}
-              value={phoneNumber} onChange={e => setPhoneNumber(e.target.value)}
+              value={phoneNumber} onChange={e => {
+                handleChange();
+                setPhoneNumber(e.target.value)
+              }}
               style={{borderRadius: ".25rem"}} />
 
               <Input type="text" placeholder="Whatsapp number" name="Whatsapp number"
               className={`${inputClassName}`}
-              value={whatsappNumber} onChange={e => setWhatsappNumber(e.target.value)}
+              value={whatsappNumber} onChange={e => {
+                handleChange();
+                setWhatsappNumber(e.target.value)
+              }}
               style={{borderRadius: ".25rem"}} />
 
               </div>
 
               <select onChange={handleChange} id="service"
-              name="service"
               className='bg-white text-black/80 px-3
               py-3 border border-gray-50/10 hidden'>
                 <option value="Frontend">Frontend Development</option>
@@ -132,7 +155,10 @@ const ContactForm = () => {
 
               <Textarea className={`${inputClassName}`}
               style={{borderRadius: ".25rem"}} rows={6} 
-              value={message} onChange={e => setMessage(e.target.value)}
+              value={message} onChange={e => {
+                handleChange();
+                setMessage(e.target.value)
+              }}
               placeholder="Describe your project here"
               name="Message" />
 

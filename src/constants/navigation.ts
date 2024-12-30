@@ -1,7 +1,7 @@
 export const navigation = [
     {
       name: "Services",
-      href: "/",
+      href: "/services",
     },
     {
       name: "Projects",
