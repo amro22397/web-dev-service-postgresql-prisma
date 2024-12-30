@@ -6,10 +6,10 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PopupWidget }  from "@/components/PopupWidget";
-import AppProvider from "../components/AppContext";
+import AppProvider from "./components/AppContext";
 import { AppContext } from "@/context/AppContext";
 
-import AppContextProvider from "../context/AppContext"
+import AppContextProvider from "./context/AppContext"
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -38,14 +38,11 @@ export default function RootLayout({
         */}
 
 
-          {/* 
           <Navbar />
-          <Footer />
-          <PopupWidget />
-          */}
 
           <div>{children}</div>
-          
+          <Footer />
+          <PopupWidget />
         
         </AppContextProvider>
       </body>

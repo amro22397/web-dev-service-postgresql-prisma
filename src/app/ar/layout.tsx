@@ -3,13 +3,13 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { PopupWidget }  from "@/components/PopupWidget";
-import AppProvider from "../components/AppContext";
+import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
+import { PopupWidget }  from "./components/PopupWidget";
+import AppProvider from "./components/AppContext";
 import { AppContext } from "@/context/AppContext";
 
-import AppContextProvider from "../context/AppContext"
+import AppContextProvider from "./context/AppContext"
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,8 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ar" dir="rtl" suppressHydrationWarning>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></link>
+
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+</style>
+
       <AppProvider >
       <body className={`${inter.className} max-w-full mx-auto sm:max-w-[95%] md:max-w-[90%] xl:max-w-[85%] relative `}>
         <AppContextProvider>
@@ -38,14 +43,11 @@ export default function RootLayout({
         */}
 
 
-          {/* 
           <Navbar />
-          <Footer />
-          <PopupWidget />
-          */}
 
           <div>{children}</div>
-          
+          <Footer />
+          <PopupWidget />
         
         </AppContextProvider>
       </body>
