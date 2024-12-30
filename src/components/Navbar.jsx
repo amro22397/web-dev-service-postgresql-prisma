@@ -21,7 +21,7 @@ export const Navbar = () => {
   return (
     <div className="w-full">
       <RquestWebsite showRequestForm={showRequestForm} setShowRequestForm={setShowRequestForm} />
-      <nav className="container relative flex flex-wrap items-center justify-between py-8 px-2 mx-auto
+      <nav className="container relative flex flex-wrap items-center justify-between py-8 px-3 mx-auto
        lg:justify-between xl:px-1">
         {/* Logo  */}
         <Link href="/">
