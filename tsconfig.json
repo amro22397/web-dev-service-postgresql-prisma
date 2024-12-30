@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/constants/navigation.js", "src/components/AppContext.js", "src/components/SwiperImage.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/constants/navigation.js", "src/components/AppContext.js", "src/components/SwiperImage.jsx", "src/app/contact/page.jsx", "src/constants/info.js", "src/components/Navbar.jsx", "src/components/HeroText.jsx"],
   "exclude": ["node_modules"]
 }

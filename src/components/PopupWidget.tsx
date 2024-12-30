@@ -26,13 +26,21 @@ export function PopupWidget() {
 
   const onSubmit = async (data: any, e: any) => {
     console.log(data);
+
+    const formData = new FormData(e.target);
+
+          formData.append("access_key", "ce9610a5-e759-46bf-86a7-08b198f09ac4");
+
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+          
     await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(data, null, 2),
+      body: json,
     })
       .then(async (response) => {
         let json = await response.json();

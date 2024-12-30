@@ -6,9 +6,10 @@ export const navigation = [
     {
       name: "Projects",
       href: "/projects",
+      isHidden: true,
     },
     {
-      name: "Contact",
+      name: "Contact Us",
       href: "/contact",
     }
   ]

@@ -4,13 +4,21 @@ import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
 import { navigation } from "../constants/navigation"
+import { useContext, useState } from "react";
+
+import RquestWebsite from "./RquestWebsite"
+import { AppContext } from "@/context/AppContext";
 
 
 export const Navbar = () => {
-  
+
+  let { setShowRequestForm,
+    showRequestForm } = useContext(AppContext); 
+
 
   return (
     <div className="w-full">
+      <RquestWebsite showRequestForm={showRequestForm} setShowRequestForm={setShowRequestForm} />
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
         {/* Logo  */}
         <Link href="/">
@@ -41,12 +49,30 @@ export const Navbar = () => {
         </Link>
 
         {/* get started  */}
-        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
+        <div className="gap-3 nav__item mr-3 lg:flex ml-auto lg:ml-0 lg:order-2">
+
+          {/* menu lg and above */}
+        <div className="hidden text-center lg:flex lg:items-center">
+          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
+            {navigation.map((menu, index) => (
+              <li className="mr-3 nav__item">
+                <Link href={menu.href} key={index} className={`w-full px-1 py-2 text-gray-500 rounded-md
+                       dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
+                        dark:focus:bg-gray-800 focus:outline-none hover:underline
+                        ${menu.isHidden ? "hidden" : ""}`}>
+                    {menu.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
             <ThemeChanger />
             <div className="hidden mr-3 lg:flex nav__item">
-              <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5
+              <Link href="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-3
               text-[16.7px] hover:bg-indigo-700 active:bg-indigo-800"
               style={{fontFamily: "Trebuchet MS"}}
+              onClick={() => setShowRequestForm(!showRequestForm)}
               >
                 Request Website
               </Link>
@@ -82,9 +108,10 @@ export const Navbar = () => {
                 <div className="flex flex-wrap w-full my-5 lg:hidden">
                   
                     {navigation.map((item, index) => (
-                      <Link href={item.href} key={index} className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md
+                      <Link href={item.href} key={index} className={`w-full px-4 py-2 -ml-4 text-gray-500 rounded-md
                        dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
-                        dark:focus:bg-gray-800 focus:outline-none hover:underline">
+                        dark:focus:bg-gray-800 focus:outline-none hover:underline
+                        ${item.isHidden ? "hidden" : ""}`}>
                           {item.name}
                       </Link>
                     ))}
@@ -97,22 +124,6 @@ export const Navbar = () => {
             </div>
           )}
         </Disclosure>
-        
-        {/* menu lg and above */}
-        <div className="hidden text-center lg:flex lg:items-center">
-          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-            {navigation.map((menu, index) => (
-              <li className="mr-3 nav__item">
-                <Link href={menu.href} key={index} className="inline-block px-4 py-2 text-lg font-normal
-                 text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500
-                  focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800
-                  hover:underline">
-                    {menu.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
 
       </nav>
     </div>
