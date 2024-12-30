@@ -60,7 +60,9 @@ export function Footer() {
                 <Link
                   key={index}
                   href={item.href}
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  className={`w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300
+                   hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
+                    focus:outline-none dark:focus:bg-trueGray-700 ${item.isHidden ? "hidden" : ""}`}
                 >
                   {item.name}
                 </Link>
