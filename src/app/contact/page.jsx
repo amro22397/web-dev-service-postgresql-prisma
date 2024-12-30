@@ -10,7 +10,7 @@ const page = () => {
     
   return (
     <div 
-    className='py-6 max-xl:max-w-[90vw] mx-auto '
+    className='py-6 max-sm:max-w-[100vw] max-xl:max-w-[525px] mx-auto '
     >
       <div className="containter mx-auto ">
         <div className="flex flex-col xl:flex-row gap-[30px]">

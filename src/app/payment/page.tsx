@@ -26,11 +26,11 @@ const page = (props: Readonly<BenefitsProps>) => {
   const { data } = props;
 
   return (
-    <div>
+    <div className='mx-2'>
       <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
               <div
                 className={`flex items-center justify-center w-full lg:w-1/2 lg:order-1`}>
-                <div>
+                <div className='max-lg:px-10'>
                   <Image
                     src={'/payment-methods-card-icon-20.png'}
                     width={450}

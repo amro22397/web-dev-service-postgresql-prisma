@@ -6,7 +6,7 @@ import HeroImage from "./HeroImage";
 export const Hero = () => {
   return (
     <>
-      <Container className="flex flex-wrap ">
+      <Container className="flex flex-wrap max-lg:gap-8">
         <HeroText />
         <HeroImage />
 

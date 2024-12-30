@@ -9,11 +9,12 @@ export function Footer() {
   const socialClassName = "hover:scale-105";
 
   return (
-    <div className="relative">
+    <div className="relative px-2">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-0 border-t
-         border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
-          <div className="lg:col-span-2">
+        <div className="grid max-w-screen-xl grid-cols-1 text-center gap-10 pt-10 mx-auto mt-0 border-t
+         border-gray-100 dark:border-trueGray-700 md:grid-cols-5">
+          <div className="md:col-span-2">
+            {/* this is hidden  */}
             <div className="hidden">
               {" "}
               <Link
@@ -31,8 +32,8 @@ export function Footer() {
               </Link>
             </div>
 
-            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400
-            text-md">
+            <div className="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400
+            text-md ">
               This is a service that helps you build a website for your business. All rights
               are reserved and the illegal use of the source code is forbidden.
             </div>

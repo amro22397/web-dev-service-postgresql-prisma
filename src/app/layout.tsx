@@ -28,15 +28,22 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></link>
       <AppProvider >
-      <body className={`${inter.className} max-w-[100%] mx-auto sm:max-w-[95%] md:max-w-[90%] xl:max-w-[85%] relative `}>
+      <body className={`${inter.className} max-w-full mx-auto sm:max-w-[95%] md:max-w-[90%] xl:max-w-[85%] relative `}>
         <AppContextProvider>
+
+
+        {/* 
         <ThemeProvider attribute="class">
+        </ThemeProvider>
+        */}
+
+
           <Navbar />
 
           <div>{children}</div>
           <Footer />
           <PopupWidget />
-        </ThemeProvider>
+        
         </AppContextProvider>
       </body>
       </AppProvider>
