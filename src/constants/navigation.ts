@@ -2,6 +2,7 @@ export const navigation = [
     {
       name: "Services",
       href: "/services",
+      isHidden: true,
     },
     {
       name: "Projects",
@@ -9,7 +10,16 @@ export const navigation = [
       isHidden: true,
     },
     {
-      name: "Contact Us",
+      name: "Payment methods",
+      href: "/payment",
+    },
+    {
+      name: "Contact us",
       href: "/contact",
+    },
+    {
+      name: "About",
+      href: "/about",
+      isHidden: true,
     }
   ]
