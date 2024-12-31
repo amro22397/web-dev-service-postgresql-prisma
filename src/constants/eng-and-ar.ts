@@ -5,6 +5,8 @@ export const address = {
 
 export const changeLanguageClassName = "font-sans font-semibold text-black/70 text-lg"
 
+export const changeLanguageClassNameMobNav = ""
+
 export const navigationIsHidden = {
     Services: {
         isHidden: true,
