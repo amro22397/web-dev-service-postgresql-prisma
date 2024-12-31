@@ -1,25 +1,29 @@
+import { navigationIsHidden } from "@/constants/eng-and-ar"
+
 export const navigation = [
     {
       name: "Services",
-      href: "/services",
-      isHidden: true,
+      href: "/en/services",
+      isHidden: navigationIsHidden.Services.isHidden,
     },
     {
       name: "Projects",
-      href: "/projects",
-      isHidden: true,
+      href: "/en/projects",
+      isHidden: navigationIsHidden.Projects.isHidden,
     },
     {
       name: "Payment methods",
-      href: "/payment",
+      href: "/en/payment",
+      isHidden: navigationIsHidden.paymentMethods.isHidden,
     },
     {
       name: "Contact us",
-      href: "/contact",
+      href: "/en/contact",
+      isHidden: navigationIsHidden.contactUs.isHidden,
     },
     {
       name: "About",
-      href: "/about",
-      isHidden: true,
+      href: "/en/about",
+      isHidden: navigationIsHidden.About.isHidden,
     }
   ]

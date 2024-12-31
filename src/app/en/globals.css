@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+* {
+    font-family: Arial, Helvetica, serif;
+}
 
 

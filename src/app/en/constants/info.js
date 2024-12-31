@@ -1,6 +1,7 @@
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { FaWhatsapp } from "react-icons/fa";
+import { address } from '@/constants/eng-and-ar';
 
 
 
@@ -19,6 +20,6 @@ export const info = [
     {
       icon: <FaMapMarkerAlt />,
       title: "Address",
-      description: "Alshifa Street, AlMawalih South, Oman"
+      description: address.eng,
     },
   ];

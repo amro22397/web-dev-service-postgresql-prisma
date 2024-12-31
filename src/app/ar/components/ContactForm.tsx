@@ -95,7 +95,7 @@ const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
         ${isAbsolute ? "absolute top-[8.27rem] bottom-0 left-0 right-0 h-full max-w-[600px] mx-auto" : ""}`}>
 
             {isAbsolute && (
-                <IoMdClose className='absolute right-3 top-3 text-2xl
+                <IoMdClose className='absolute left-3 top-3 text-2xl
                 hover:text-black/80 cursor-pointer hover:scale-95'
                 onClick={() => setShowRequestForm(false)} />
             )}

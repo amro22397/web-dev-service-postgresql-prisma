@@ -6,6 +6,7 @@ import { Disclosure } from "@headlessui/react";
 import { navigation } from "../constants/navigation"
 import { useContext, useState } from "react";
 
+import { changeLanguageClassName } from "@/constants/eng-and-ar";
 import RquestWebsite from "./RquestWebsite"
 import { AppContext } from "../context/AppContext";
 import { IoMdMenu } from "react-icons/io";
@@ -67,7 +68,10 @@ export const Navbar = () => {
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item">
                 <Link href={menu.href} key={index}
-                onClick={() => setShowRequestForm(false)}
+                onClick={() => {
+                  setShowRequestForm(false);
+                  setIsMobNavOpen(false);
+                }}
                 style={arabicNavigationFont}
                 className={`w-full px-[10px] py-2 text-gray-500 rounded-md
                        dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
@@ -78,6 +82,10 @@ export const Navbar = () => {
               </li>
             ))}
             
+            <Link href={'/en'}
+        className={`${changeLanguageClassName}`}
+        style={{fontFamily: ""}}>En</Link>
+
           </ul>
         </div>
 
@@ -105,21 +113,34 @@ export const Navbar = () => {
 
         {/* max lg nav menu */}
         {isMobNavOpen && (
-          <div className="flex flex-wrap w-full my-5 lg:hidden">
+          <div className="flex flex-col justify-center items-center w-full my-9 gap-[6px] lg:hidden">
                   
-          {navigation.toReversed().map((item, index) => (
+          {navigation.map((item, index) => (
             <Link href={item.href} key={index}
+            onClick={() => {
+              setShowRequestForm(false);
+              setIsMobNavOpen(false);
+            }}
             style={arabicNavigationFont}
-            className={`w-full px-4 py-2 -ml-4 text-gray-500 rounded-md
+            className={`px-4 py-2 text-gray-500 rounded-md
              dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
               dark:focus:bg-gray-800 focus:outline-none hover:underline
               ${item.isHidden ? "hidden" : ""}`}>
                 {item.name}
             </Link>
           ))}
+          
+          <Link href={'/en'}
+        className={`${changeLanguageClassName}`}
+        style={{fontFamily: ""}}>English</Link>
 
           {/* Request a web nav button */}
-      <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white
+      <Link href="/ar/contact" 
+      onClick={() => {
+        setShowRequestForm(false);
+        setIsMobNavOpen(false);
+      }}
+      className="w-full px-6 py-2 mt-3 text-center text-white
            bg-indigo-600 rounded-md lg:ml-5 text-[16.7px] hover:bg-indigo-700 active:bg-indigo-800">         
           Request Website
           </Link>

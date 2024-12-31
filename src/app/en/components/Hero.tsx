@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container } from "@/components/Container";
+import { Container } from "../components/Container";
 import HeroText from "./HeroText"
 import HeroImage from "./HeroImage";
 

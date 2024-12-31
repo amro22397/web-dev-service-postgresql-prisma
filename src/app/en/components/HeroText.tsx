@@ -1,6 +1,6 @@
 'use client'
 
-import { AppContext } from '../context/AppContext'
+import { AppContext } from '../context/AppContext';
 import Link from 'next/link'
 import React, { useContext } from 'react'
 

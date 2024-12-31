@@ -1,10 +1,10 @@
 'use client'
 
 import React, { useState } from 'react'
-import { info } from '../../constants/info'
+import { info } from '../constants/info'
 import './page.css'
 import Link from 'next/link'
-import ContactForm from '@/components/ContactForm'
+import ContactForm from '../components/ContactForm'
 
 const page = () => {
     
