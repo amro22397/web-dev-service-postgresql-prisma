@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Container }  from "@/components/Container";
+import { Container }  from "../components/Container";
 
 interface BenefitsProps {
   imgPos?: "left" | "right";

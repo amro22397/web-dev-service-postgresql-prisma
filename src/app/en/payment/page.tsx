@@ -1,9 +1,9 @@
-import { Benefits } from '@/components/Benefits'
+import { Benefits } from '../components/Benefits'
 import React from 'react'
-import { benefitOne, benefitTwo } from "@/components/data";
+import { benefitOne, benefitTwo } from "../components/data";
 import Image from "next/image";
-import { Container }  from "@/components/Container";
-import { paymentMethods } from '@/constants/paymentMethods';
+import { Container }  from "../components/Container";
+import { paymentMethods } from '../constants/paymentMethods';
 
 interface BenefitsProps {
   imgPos?: "left" | "right";
