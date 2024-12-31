@@ -42,7 +42,7 @@ onClick={() => setProjects(fullStackProjects)}>
 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 max-xl:grid-cols-3">
 
     {projects.length > 0 && projects.map((project: any, index: number) => (
-        <Link key={index} href={`/projects/${project._id}`}>
+        <Link key={index} href={`/en/projects/${project._id}`}>
          <div key={index} className="flex flex-col justify-start items-center
         bg-indigo-200 gap-3 shadow-lg mb-3 transform hover:scale-[1.01] transition-all duration-300 ease-in-out
         cursor-pointer h-[460px] max-w-[370px] mx-auto

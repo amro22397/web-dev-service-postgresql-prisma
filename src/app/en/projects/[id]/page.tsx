@@ -6,7 +6,7 @@ import { Navigation, Pagination } from 'swiper/modules'
 import { useSession } from 'next-auth/react' 
 import "swiper/css"; */
 
-import SwiperImage from '../../../components/SwiperImage'
+import SwiperImage from '../../components/SwiperImage'
 import { FaArrowRight } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 
@@ -14,15 +14,15 @@ import { IoMdArrowBack } from "react-icons/io";
 
   import Link from 'next/link';
   import Image from 'next/image';
-  import WorkSliderBtns from '../../../components/WorkSliderBtns';
+  import WorkSliderBtns from '../../components/WorkSliderBtns';
   import exp from 'constants';
   
 
 import { useParams, usePathname } from 'next/navigation';
 import mongoose from "mongoose";
-import { Project } from "../../../models/project";
+import { Project } from "../../models/project";
 
-import EditDeleteButtons from '../../../components/EditDeleteButtons'
+import EditDeleteButtons from '../../components/EditDeleteButtons'
 
 
 
@@ -60,7 +60,7 @@ export default async function page(props: PageProps) {
 
                     <div className=" flex flex-row items-center justify-between
                     mb-10 max-xl:mt-4">
-               <Link href='/projects' >
+               <Link href='/en/projects' >
                     <button className='bg-yellow-500 px-4 py-[4px] text-orange-800 rounded-sm
                 font-semibold hover:bg-yellow-400 active:bg-yellow-300 transition-all duration-100
                 flex flex-row items-center gap-2'>
@@ -95,6 +95,7 @@ export default async function page(props: PageProps) {
 
 
                         <p className="text-gray-800 text-md whitespace-pre-line
+                        width-[95%]
                         " style={{fontFamily: 'sans-serif'}}>{project.description}</p>
                         
                         <div className="flex flex-wrap gap-6
