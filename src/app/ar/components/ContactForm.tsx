@@ -22,8 +22,8 @@ import Link from 'next/link'
 const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
     isAbsolute : boolean, showRequestForm: boolean, setShowRequestForm: any
 }) => {
-
-    const [yourName, setYourName] = useState('');
+      
+      const [yourName, setYourName] = useState('');
       const [email, setEmail] = useState('');
       const [phoneNumber, setPhoneNumber] = useState('');
       const [whatsappNumber, setWhatsappNumber] = useState('');
@@ -103,15 +103,15 @@ const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
             <form onSubmit={handleSubmit}
             className={`flex flex-col gap-6 p-10 bg-indigo-300/90 
             ${isAbsolute ? "bg-indigo-300/95" : ""}`}>
-              <h3 className="text-4xl text-stone-600"
-              style={{fontFamily: "Trebuchet MS"}}>Let's work together</h3>
+              <h3 className="text-3xl text-stone-600"
+              >أرسل طلب مشروعك</h3>
               <p className="text-black">
-              Fill the form and send it to request building your website...
+              اكمل الفورم وأرسله لطلب بناء مشروعك...
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-              <Input type="name" placeholder="Your Name" name="Customer Name"
+              <Input type="name" placeholder="الاسم" name="اسم العميل"
               className={`${inputClassName}`}
               value={yourName} onChange={e => {
                 handleChange();
@@ -119,7 +119,7 @@ const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
               }}
               style={{borderRadius: ".25rem"}} />
               
-              <Input type="email" placeholder="Email address" name="Email address"
+              <Input type="email" placeholder="البريد الإلكتروني" name="البريد الإلكتروني"
               className={`${inputClassName}`}
               value={email} onChange={e => {
                 handleChange();
@@ -127,7 +127,7 @@ const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
               }}
               style={{borderRadius: ".25rem"}} />
 
-              <Input type="phone" placeholder="Phone number" name="Phone number"
+              <Input type="phone" placeholder="رقم الهاتف" name="رقم الهاتف"
               className={`${inputClassName}`}
               value={phoneNumber} onChange={e => {
                 handleChange();
@@ -135,7 +135,7 @@ const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
               }}
               style={{borderRadius: ".25rem"}} />
 
-              <Input type="text" placeholder="Whatsapp number" name="Whatsapp number"
+              <Input type="text" placeholder="رقم الواتساب" name="رقم الواتساب"
               className={`${inputClassName}`}
               value={whatsappNumber} onChange={e => {
                 handleChange();
@@ -159,14 +159,14 @@ const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
                 handleChange();
                 setMessage(e.target.value)
               }}
-              placeholder="Describe your project here"
-              name="Message" />
+              placeholder="اشرح تفاصيل مشروعك هنا"
+              name="الرسالة" />
 
               <Button type='submit'
               size="sm" className="max-w-40 py-2 bg-indigo-600 hover:bg-indigo-700
               active:scale-95 text-white disabled:bg-gray-400" disabled={loading}
               style={{borderRadius: ".25rem"}}>
-                {loading ? 'Sending...' : 'Send message'}
+                {loading ? 'جاري الإرسال...' : 'أرسل الرسالة'}
               </Button>
 
               {messageSuccess && (
@@ -174,7 +174,7 @@ const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
                 gap-2">
                   <i className="fa-solid fa-circle-check
                   text-green-600 "></i>
-                  <span>Message sent successfully!</span>
+                  <span>تم إرسال الرسالة بنجاح</span>
                 </div>
               )}
             </form>

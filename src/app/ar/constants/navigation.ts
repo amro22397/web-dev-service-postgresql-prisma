@@ -5,9 +5,8 @@ export const navigation = [
     isHidden: true,
   },
   {
-    name: "المشاريع",
-    href: "/ar/projects",
-    isHidden: true,
+    name: "اعمال سابقة",
+    href: "/ar/projects"
   },
   {
     name: "طرق الدفع",

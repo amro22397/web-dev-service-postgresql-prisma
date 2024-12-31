@@ -64,7 +64,7 @@ export const Navbar = () => {
           {/* menu lg and above */}
         <div className="hidden text-center lg:flex lg:items-center">
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-            {navigation.toReversed().map((menu, index) => (
+            {navigation.map((menu, index) => (
               <li className="mr-3 nav__item">
                 <Link href={menu.href} key={index}
                 onClick={() => setShowRequestForm(false)}

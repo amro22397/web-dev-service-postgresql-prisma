@@ -53,7 +53,7 @@ export function Footer() {
 
 
           <div className="flex flex-col items-center">
-            <div>Follow us</div>
+            <div className="font-sans font-semibold text-lg">Follow us</div>
             <div className="flex mt-4 gap-5 text-gray-400 dark:text-gray-500">
               <a
                 href="https://www.facebook.com/profile.php?id=61571211236756"
@@ -97,9 +97,11 @@ export function Footer() {
         flex flex-col gap-[2.5px]">
           <div className="">حقوق النشر © {new Date().getFullYear()}</div>
 
-          <div className="">
+          <div style={{}}
+           className="font-sans font-semibold">
           Made by{" "}
-          <a href="" target="_blank" rel="noopener">
+          <a href="" className="font-sans font-semibold"
+           target="_blank" rel="noopener">
             Web Dev Service
           </a>{" "}
           </div>

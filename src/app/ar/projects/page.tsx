@@ -2,9 +2,9 @@ import React from 'react'
 import './page.css'
 
 import mongoose from 'mongoose';
-import { Project } from '../../models/project';
-import AddProject from '../../components/AddProject';
-import ProjectFilter from '../../components/ProjectsFilter'
+import { Project } from '../models/project';
+import AddProject from '../components/AddProject';
+import ProjectFilter from '../components/ProjectsFilter'
 import { revalidatePath } from 'next/cache';
 
 

@@ -1,24 +1,25 @@
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { FaWhatsapp } from "react-icons/fa";
+import { address } from '@/constants/eng-and-ar';
 
 
 
 export const info = [
     {
       icon: <FaWhatsapp />,
-      title: "Whatsapp",
-      description: "Click here",
+      title: "الواتساب",
+      description: "أضغط هنا",
       link: "http://wa.me/+249995291772"
     },
     {
       icon: <FaEnvelope />,
-      title: "Email",
+      title: "البريد الإلكتروني",
       description: "admin@wds-oman.com"
     },
     {
       icon: <FaMapMarkerAlt />,
-      title: "Address",
-      description: "Alshifa Street, AlMawalih South, Oman"
+      title: "العنوان",
+      description: address.ar,
     },
   ];

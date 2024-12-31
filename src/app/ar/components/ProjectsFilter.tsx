@@ -21,7 +21,7 @@ const [projects, setProjects] = useState(allProjects);
 
 <div id="filter-key"
 onClick={() => setProjects(allProjects)}>
-    All
+    الكل
 </div>
 
 <div id="filter-key"
