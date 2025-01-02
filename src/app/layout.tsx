@@ -3,9 +3,6 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { PopupWidget }  from "@/components/PopupWidget";
 import AppProvider from "../components/AppContext";
 import { AppContext } from "@/context/AppContext";
 
@@ -26,6 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7118500493932643"
+     crossorigin="anonymous"></script>
+
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></link>
       <AppProvider >
       <body className={`${inter.className} max-w-full mx-auto sm:max-w-[95%] md:max-w-[90%] xl:max-w-[85%] relative `}>
