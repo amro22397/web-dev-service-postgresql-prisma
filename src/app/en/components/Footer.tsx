@@ -32,7 +32,7 @@ export function Footer() {
               </Link>
             </div>
 
-            <div className="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-400
+            <div className="max-w-md mx-auto mt-4 text-gray-500 dark:text-gray-100
             text-md ">
               This is a service that helps you build a website for your business. All rights
               are reserved and the illegal use of the source code is forbidden.
@@ -61,8 +61,9 @@ export function Footer() {
                 <Link
                   key={index}
                   href={item.href}
-                  className={`w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300
-                   hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
+                  className={`w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-100
+                   hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 hover:underline
+                   dark:hover:text-indigo-300 dark:focus:text-indigo-300 dark:focus:bg-indigo-100
                     focus:outline-none dark:focus:bg-trueGray-700 ${item.isHidden ? "hidden" : ""}`}
                 >
                   {item.name}
@@ -76,7 +77,10 @@ export function Footer() {
                 <Link
                   key={index}
                   href="/"
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-100
+                   hover:text-indigo-500 focus:text-indigo-500 hover:underline
+                   dark:hover:text-indigo-300 dark:focus:text-indigo-300
+                   focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
                 >
                   {item}
                 </Link>
@@ -85,7 +89,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col items-center">
             <div>Follow us</div>
-            <div className="flex mt-4 gap-5 text-gray-400 dark:text-gray-500">
+            <div className="flex mt-4 gap-5 text-gray-400 dark:text-gray-50">
               <a
                 href="https://www.facebook.com/profile.php?id=61571211236756"
                 target="_blank"
@@ -109,7 +113,7 @@ export function Footer() {
                 <Linkedin />
               </a>
               <a
-                href="/"
+                href=""
                 target="_blank"
                 rel="noopener"
                 className={`${socialClassName}`}
@@ -121,7 +125,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400
+        <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-200
         flex flex-col gap-[2.5px]">
           <div className="">Copyright © {new Date().getFullYear()}</div>
 

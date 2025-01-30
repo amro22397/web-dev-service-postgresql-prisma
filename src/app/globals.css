@@ -2,7 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply dark:bg-zinc-800;
+}
+.change-language {
+    @apply font-sans font-semibold text-black/70 dark:text-white/95 text-lg;
+}
 
+.contact-form {
+    @apply py-6 max-w-[100vw] sm:max-w-[1400px] mx-auto
+}
 
+.contact-form-title {
+    @apply text-4xl text-stone-600 dark:text-stone-100;
+}
 
+.social-contact-text {
+    @apply text-black dark:text-white font-semibold;
+}
 
+.payment-div {
+    @apply mx-auto px-1;
+}
+
+.fi-sun {
+    @apply text-white cursor-pointer ml-2;
+}
+
+.fi-moon {
+    @apply text-black cursor-pointer ml-2;
+}
+
+.sun-moon-classname-arabic {
+    @apply mr-3 hidden lg:block;
+}
+
+.payment-picture-lg-plus {
+    @apply object-cover block dark:hidden;
+}
+
+.payment-picture-max-lg {
+    @apply object-cover hidden dark:hidden;
+}

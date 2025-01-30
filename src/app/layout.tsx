@@ -7,6 +7,7 @@ import AppProvider from "../components/AppContext";
 import { AppContext } from "@/context/AppContext";
 
 import AppContextProvider from "../context/AppContext"
+import { Providers } from "./en/provider";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -33,10 +34,10 @@ export default function RootLayout({
         <AppContextProvider>
 
 
-        {/* 
-        <ThemeProvider attribute="class">
-        </ThemeProvider>
-        */}
+        
+        
+        
+        
 
 
           {/* 
@@ -44,8 +45,10 @@ export default function RootLayout({
           <Footer />
           <PopupWidget />
           */}
-
+          
+          <Providers>
           <div>{children}</div>
+          </Providers>
           
         
         </AppContextProvider>

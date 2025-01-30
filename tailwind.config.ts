@@ -10,7 +10,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: ["class", "class"], // or 'media' or 'class'
+  darkMode: ["class"], // or 'media' or 'class'
   theme: {
   	extend: {
   		colors: {

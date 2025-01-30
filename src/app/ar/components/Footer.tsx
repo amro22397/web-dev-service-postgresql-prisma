@@ -78,7 +78,7 @@ export function Footer() {
                 <Linkedin />
               </a>
               <a
-                href="/"
+                href=""
                 target="_blank"
                 rel="noopener"
                 className={`${socialClassName}`}

@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 
 // should declare here the type of the things that i pass as props
 type AppContextType = {
-    setShowRequestForm : any,
+    setShowRequestForm : () => void,
     showRequestForm : any
 }
 

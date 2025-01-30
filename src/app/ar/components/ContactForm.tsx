@@ -103,7 +103,7 @@ const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
             <form onSubmit={handleSubmit}
             className={`flex flex-col gap-6 p-10 bg-indigo-300/90 
             ${isAbsolute ? "bg-indigo-300/95" : ""}`}>
-              <h3 className="text-3xl text-stone-600"
+              <h3 className="text-3xl contact-form-title"
               >أرسل طلب مشروعك</h3>
               <p className="text-black">
               اكمل الفورم وأرسله لطلب بناء مشروعك...

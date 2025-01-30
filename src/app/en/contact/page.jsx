@@ -10,7 +10,7 @@ const page = () => {
     
   return (
     <div 
-    className='py-6 max-sm:max-w-[100vw] max-xl:max-w-[525px] mx-auto '
+    className='contact-form'
     >
       <div className="containter mx-auto ">
         <div className="flex flex-col xl:flex-row gap-[30px]">
@@ -31,7 +31,7 @@ const page = () => {
                     </div>
 
                     <div className="flex-1">
-                      <p className="text-black font-semibold">{item.title}</p>
+                      <p className="social-contact-text">{item.title}</p>
                       {item.link ? (
                         <Link className="hover:underline hover:text-green-500" href={item.link} >{item.description}</Link>
                       ) : (

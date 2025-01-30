@@ -10,6 +10,7 @@ import AppProvider from "./components/AppContext";
 import { AppContext } from "./context/AppContext";
 
 import AppContextProvider from "./context/AppContext"
+import { Providers } from "./provider";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -46,7 +47,12 @@ export default function RootLayout({
 
           <Navbar />
 
+          
+          <Providers>
           <div>{children}</div>
+          </Providers>
+          
+          
           <Footer />
           <PopupWidget />
         

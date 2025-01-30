@@ -7,26 +7,37 @@ import { navigation } from "../constants/navigation"
 import { useContext, useState } from "react";
 
 import RquestWebsite from "./RquestWebsite"
-import { AppContext } from "../context/AppContext";
 import { IoMdMenu } from "react-icons/io";
 import { changeLanguageClassName } from "@/constants/eng-and-ar";
+import { AppContext, AppContextType } from "@/context/AppContext";
+
 
 
 export const Navbar = () => {
 
-  let { setShowRequestForm,
-    showRequestForm } = useContext(AppContext); 
+  let { 
+    setShowRequestForm,
+    showRequestForm,
+    isMobNavOpen,
+    setIsMobNavOpen,
+    menuOnClick,
+    logoOnClick,
+  } = useContext(AppContext) as AppContextType; 
+    
+    
 
-    const [isMobNavOpen, setIsMobNavOpen] = useState(false);
+    // const [isMobNavOpen, setIsMobNavOpen] = useState(false);
 
   return (
     <div className="w-full">
       <RquestWebsite showRequestForm={showRequestForm} setShowRequestForm={setShowRequestForm} />
+
       <nav className="container relative flex flex-wrap items-center justify-between py-8 px-3 mx-auto
        lg:justify-between xl:px-1">
         {/* Logo  */}
-        <Link href="/en">
-          <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
+        <Link href="/en"
+        onClick={logoOnClick}>
+          <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-indigo-200">
               <span>
                 <Image
                   src="/img/logo.svg"
@@ -68,23 +79,25 @@ export const Navbar = () => {
                   setIsMobNavOpen(false);
                 }}
                 className={`w-full px-1 py-2 text-gray-500 rounded-md
-                       dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
+                       dark:text-gray-100 hover:text-indigo-500 focus:text-indigo-500
+                       dark:hover:text-indigo-300 dark:focus:text-indigo-300 focus:bg-indigo-100
                         dark:focus:bg-gray-800 focus:outline-none hover:underline
                         ${menu.isHidden ? "hidden" : ""}`}>
                     {menu.name}
                 </Link>
               </li>
             ))}
+    
             
             <Link href={'/ar'}
-        className={`${changeLanguageClassName}`}
+        className='change-language'
         style={{fontFamily: "Arial"}}>العربية</Link>
 
           </ul>
 
         </div>
 
-            <ThemeChanger />
+        <ThemeChanger />
 
             
 
@@ -101,8 +114,11 @@ export const Navbar = () => {
             
         </div>
 
-        <IoMdMenu onClick={() => setIsMobNavOpen(!isMobNavOpen)}
-        className="lg:hidden text-2xl text-gray-700 hover:text-gray-800 cursor-pointer"/>
+        <IoMdMenu onClick={() => {
+          menuOnClick();
+        }}
+        className="lg:hidden text-2xl text-gray-700 hover:text-gray-800
+         dark:text-gray-200 dark:hover:text-gray-100 cursor-pointer"/>
         
 
         {/* max lg nav menu */}
@@ -117,7 +133,8 @@ export const Navbar = () => {
               setIsMobNavOpen(false);
             }}
             className={`px-4 py-2 text-gray-500 rounded-md
-             dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
+             dark:text-gray-100 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
+             dark:hover:text-indigo-300 dark:focus:text-indigo-300
               dark:focus:bg-gray-800 focus:outline-none hover:underline
               ${item.isHidden ? "hidden" : ""}`}>
                 {item.name}
@@ -125,7 +142,7 @@ export const Navbar = () => {
           ))}
           
           <Link href={'/ar'}
-        className={`${changeLanguageClassName}`}
+        className='change-language'
         style={{fontFamily: "Arial"}}>العربية</Link>
 
           {/* Request a web nav button */}

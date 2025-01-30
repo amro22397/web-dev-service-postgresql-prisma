@@ -1,18 +1,47 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
+'use client'
 
-const ThemeChanger = () => {
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { FiMoon, FiSun } from "react-icons/fi";
+
+const ThemeChanger = ({ className }: { className?: string}) => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true)
+}, []);
 
-  if (!mounted) return null;
 
-  return (
-    <div className="flex items-center order-last hidden">
+if (!mounted) return (
+  <Image
+  src=""
+  width={36}
+  height={36}
+  sizes="36x36"
+  alt="Loading Light/Dark Toggle"
+  priority={false}
+  title="Loading Light/Dark Toggle" />
+)
+
+if (resolvedTheme === 'dark') {
+  return <FiSun className={`fi-sun`} size={25}
+  onClick={() => setTheme('light')} />
+}
+
+if (resolvedTheme === 'light') {
+  return <FiMoon className={`fi-moon`} size={25}
+   onClick={() => setTheme('dark')} />
+}
+
+
+
+
+
+/*  return (
+    <div className="flex items-center order-last">
       {theme === "dark" ? (
         <button
           onClick={() => setTheme("light")}
@@ -48,7 +77,7 @@ const ThemeChanger = () => {
         </button>
       )}
     </div>
-  );
+  ); */
 };
 
 export default ThemeChanger;

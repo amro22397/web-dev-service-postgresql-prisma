@@ -26,7 +26,7 @@ const page = (props: Readonly<BenefitsProps>) => {
   const { data } = props;
 
   return (
-    <div className='mx-2'>
+    <div className='payment-div'>
       <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
               <div
                 className={`flex items-center justify-center w-full lg:w-1/2 lg:order-1`}>
@@ -36,7 +36,19 @@ const page = (props: Readonly<BenefitsProps>) => {
                     width={450}
                     height={400}
                     alt="Benefits"
-                    className={"object-cover"}
+                    className={"payment-picture-lg-plus"}
+                    placeholder="blur"
+                    blurDataURL={benefitTwo.image.src}
+                  />
+                </div>
+
+                <div className='max-lg:px-10'>
+                  <Image
+                    src={'/hd-white-hand-credit-card-payment-icon-png-701751695036443iyjrrmspis.png'}
+                    width={450}
+                    height={400}
+                    alt="Benefits"
+                    className={"payment-picture-max-lg"}
                     placeholder="blur"
                     blurDataURL={benefitTwo.image.src}
                   />
@@ -84,10 +96,10 @@ function Benefit(props: any) {
           />
         </div>
         <div>
-          <h4 className="text-xl font-medium text-gray-800 dark:text-gray-200">
+          <h4 className="text-xl font-medium text-gray-800 dark:text-gray-100">
             {props.title}
           </h4>
-          <p className="mt-1 text-gray-500 dark:text-gray-400">
+          <p className="mt-1 text-gray-500 dark:text-gray-200">
             {props.desc}
           </p>
         </div>

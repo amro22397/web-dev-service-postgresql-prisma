@@ -103,7 +103,7 @@ const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
             <form onSubmit={handleSubmit}
             className={`flex flex-col gap-6 p-10 bg-indigo-300/90 
             ${isAbsolute ? "bg-indigo-300/95" : ""}`}>
-              <h3 className="text-4xl text-stone-600"
+              <h3 className="contact-form-title"
               style={{fontFamily: "Trebuchet MS"}}>Let's work together</h3>
               <p className="text-black">
               Fill the form and send it to request building your website...

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Container }  from "../components/Container";
 import { paymentMethods } from '../constants/paymentMethods';
 
-interface BenefitsProps {
+interface BenefitsProps { 
   imgPos?: "left" | "right";
   data: {
     imgPos?: "left" | "right";
@@ -26,9 +26,9 @@ const page = (props: Readonly<BenefitsProps>) => {
   const { data } = props;
 
   return (
-    <div className='mx-2'>
-      <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
-              <div
+    <div className='payment-div'>
+      <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap  ">
+      <div
                 className={`flex items-center justify-center w-full lg:w-1/2 lg:order-1`}>
                 <div className='max-lg:px-10'>
                   <Image
@@ -36,7 +36,19 @@ const page = (props: Readonly<BenefitsProps>) => {
                     width={450}
                     height={400}
                     alt="Benefits"
-                    className={"object-cover"}
+                    className={"payment-picture-lg-plus"}
+                    placeholder="blur"
+                    blurDataURL={benefitTwo.image.src}
+                  />
+                </div>
+
+                <div className='max-lg:px-10'>
+                  <Image
+                    src={'/hd-white-hand-credit-card-payment-icon-png-701751695036443iyjrrmspis.png'}
+                    width={450}
+                    height={400}
+                    alt="Benefits"
+                    className={"payment-picture-max-lg"}
                     placeholder="blur"
                     blurDataURL={benefitTwo.image.src}
                   />
