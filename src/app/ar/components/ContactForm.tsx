@@ -20,7 +20,7 @@ import Link from 'next/link'
 
 
 const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
-    isAbsolute : boolean, showRequestForm: boolean, setShowRequestForm: any
+    isAbsolute?: boolean, showRequestForm: boolean, setShowRequestForm: any
 }) => {
       
       const [yourName, setYourName] = useState('');

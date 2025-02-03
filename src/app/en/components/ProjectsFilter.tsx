@@ -49,7 +49,7 @@ max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 max-xl:grid-cols-3">
         max-sm:max-w-full" id="project-card">
             
             <Image src={project.imageUrls[0]} alt={project.title}
-            className='object-fill max-sm:w-full max-sm:h-[50%]' width={420} height={200} />
+            className='object-fill w-full max-sm:w-full max-sm:h-[50%]' width={420} height={200} />
 
             <h2 className="text-2xl font-semibold text-slate-700">{project.title}</h2>
 
