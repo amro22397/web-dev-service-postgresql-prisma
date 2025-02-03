@@ -45,8 +45,7 @@ export default async function page(props: PageProps) {
         
 
 
-        <div className="container flex flex-col max-xl:items-center justify-center mx-auto
-        mt-9 mb-40">
+        <div className="project-id-container">
 
 
             <div className="flex flex-col xl:flex-row xl:gap-[30px]
@@ -54,8 +53,7 @@ export default async function page(props: PageProps) {
 
                 <pre className='hidden'>{JSON.stringify(project, null, 2)}</pre>
 
-                <div className=" xl:h-[460px] flex flex-col
-                mx-0 max-xl:mx-7 ">
+                <div className=" project-id-flex-row ">
                     
 
                     <div className=" flex flex-row items-center justify-between
@@ -82,25 +80,25 @@ export default async function page(props: PageProps) {
                     <div className='flex flex-col gap-5 h-[50%]'>
 
 
-                        <h2 className="text-[42px] font-bold leading-none text-black
-                        group-hover:text-gray-700 transition-all duration-500 capitalize
-                        mb-3">
+                        <h2 className="project-id-title"
+                        style={{fontFamily: "Arial, Helvetica, serif"}}>
                             {project.title}
                         </h2>
 
                         <button className="bg-yellow-600 px-2 py-1 border-solid border-2 border-black
-                        w-[150px] text-white cursor-auto font-semibold">
+                        w-[150px] text-white cursor-auto font-semibold"
+                        style={{fontFamily: "Arial, Helvetica, serif"}}>
                         {project.category}
                         </button>
 
-                        <p className="text-gray-700">{project.date}</p>
+                        <p className="project-id-date"
+                        style={{fontFamily: "Arial, Helvetica, serif"}}>{project.date}</p>
 
 
-                        <p className="text-gray-800 text-md whitespace-pre-line
+                        <p className="project-id-description
                         " style={{fontFamily: 'sans-serif'}}>{project.description}</p>
                         
-                        <div className="flex flex-wrap gap-6
-                        text-md font-semibold mt-2">
+                        <div className="project-id-technologies">
                             {project.technologiesArray.map((tech: any, index: number) => (
                                 <span 
                                 key={index} className="bg-gray-300 px-4 py-[2.5px] rounded-full
@@ -121,9 +119,9 @@ export default async function page(props: PageProps) {
 
                         
 
-                        <ul className="flex gap-4"></ul>
+                        <ul className="project-id-border-ul-before-technologies"></ul>
 
-                        <div className="border border-black/20"></div>
+                        <div className="project-id-border-after-technologies"></div>
 
                         <div className='flex items-center gap-4'>
 
