@@ -132,8 +132,9 @@ export default async function page(props: PageProps) {
                                     <Link href={project.link} target='_blank'
                             >
                                 <button className="bg-blue-700 text-white flex flex-row justify-center items-center gap-3
-                                px-5 py-1 rounded-full hover:bg-blue-800 active:bg-blue-900">Visit the website <FaArrowRight
-                                className='mt-[3px]' /></button>
+                                px-5 py-1 rounded-full hover:bg-blue-800 active:bg-blue-900"
+                                style={{fontFamily: "Arial, Helvetica, serif"}}> <FaArrowRight
+                                className='' /> Visit the website</button>
                             </Link>
                                 )}
                             

@@ -13,9 +13,13 @@ const page = async () => {
     mongoose.connect(process.env.MONGO_URL as string)
 
     const frontEndProjects = await Project.find({category: {$in: ["Frontend"]}}, {}, {sort: {createdAt: -1}})
-    const fullStackProjects = await Project.find({category: {$in: ["Fullstack"]}}, {}, {sort: {createdAt: -1}})
-
-    const allProjects = await Project.find({}, {}, {sort: {createdAt: -1}})
+        const jFrontEndProjects = JSON.parse(JSON.stringify(frontEndProjects));
+    
+        const fullStackProjects = await Project.find({category: {$in: ["Fullstack"]}}, {}, {sort: {createdAt: -1}})
+        const jFullStackProjects = JSON.parse(JSON.stringify(fullStackProjects))
+    
+        const allProjects = await Project.find({}, {}, {sort: {createdAt: -1}})
+        const jAllProjects = JSON.parse(JSON.stringify(allProjects))
 
     revalidatePath('/');
 
@@ -29,8 +33,8 @@ const page = async () => {
                 <AddProject  />
                 </div>
     
-    <ProjectFilter allProjects={allProjects} frontEndProjects={frontEndProjects}
-                fullStackProjects={fullStackProjects} />
+                <ProjectFilter allProjects={jAllProjects} frontEndProjects={jFrontEndProjects}
+                fullStackProjects={jFullStackProjects} />
         
        
 

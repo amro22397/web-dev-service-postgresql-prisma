@@ -26,6 +26,8 @@ const AppContextProvider = (props : Props) => {
 
     const [isMobNavOpen, setIsMobNavOpen] = useState(false);
 
+    // const [projects, setProjects] = useState(fullStackProjects);
+
     const menuOnClick = () => {
         setIsMobNavOpen(!isMobNavOpen);
           setShowRequestForm(false);

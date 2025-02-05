@@ -9,7 +9,7 @@ const ProjectsFilter = (
     {allProjects: any, frontEndProjects: any, fullStackProjects: any }
 ) => {
 
-const [projects, setProjects] = useState(allProjects);
+  const [projects, setProjects] = useState(fullStackProjects);
 
   return (
 
@@ -25,11 +25,13 @@ onClick={() => setProjects(allProjects)}>
 </div>
 
 <div id="filter-key"
+style={{fontFamily: "Arial, Helvetica, serif"}}
 onClick={() => setProjects(fullStackProjects)}>
     Fullstack
 </div>
 
 <div id="filter-key"
+style={{fontFamily: "Arial, Helvetica, serif"}}
  onClick={() => setProjects(frontEndProjects)}>
     Frontend
 </div>
@@ -48,10 +50,12 @@ max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 max-xl:grid-cols-3">
             <Image src={project.imageUrls[0]} alt={project.title}
             className='projects-image' width={420} height={200} />
 
-            <h2 className="text-2xl font-semibold text-slate-700">{project.title}</h2>
+            <h2 className="text-2xl font-semibold text-slate-700"
+            style={{fontFamily: "Arial, Helvetica, serif"}}>{project.title}</h2>
 
             <button className="bg-indigo-600 px-2 py-0 border-solid
-                w-[150px] text-white cursor-auto font-semibold">
+                w-[150px] text-white cursor-auto font-semibold"
+                style={{fontFamily: "Arial, Helvetica, serif"}}>
                 {project.category}
                 </button>
 
