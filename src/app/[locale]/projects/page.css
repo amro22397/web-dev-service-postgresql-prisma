@@ -1,0 +1,33 @@
+#project-card {
+    @apply rounded-xl max-sm:rounded-none;
+}
+
+#project-card img {
+    @apply rounded-t-xl max-sm:rounded-none;
+}
+
+#filter-key {
+  @apply bg-indigo-600 dark:bg-stone-500 px-4 py-[5px] font-sans text-white  cursor-pointer
+  text-xl transform hover:scale-105 hover:transition-all duration-500 rounded-lg
+  active:scale-95
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

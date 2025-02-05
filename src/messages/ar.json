@@ -1,0 +1,56 @@
+{
+    "HomePage": {
+      "title": "أطلب بناء موقعك الخاص حسب ماتحتاج",
+      "desc": "هذه خدمة تمكنك من بناء مواقع مختلفة لمشروعك. نستطيع تصميم الموقع كما تريد وجعله موقع متجاوب.",
+      "requestBuilding": "أطلب تصميم موقعك الخاص",
+      "example": "Example"
+    },
+
+    "ProjectsPage": {
+      "Add Project": "أضف مشروع",
+      "All": "الكل",
+      "Fullstack": "Fullstack",
+      "Frontend": "Frontend"
+    },
+
+    "ProjectByIdPage": {
+        "Back to projects": "العودة إلى المشاريع",
+        "Visit the website": "قم بزيارة الموقع",
+        "DeleteProjectConfirm": "هل أنت متأكد أنك تريد حذف المشروع ؟",
+        "Edit": "تعديل",
+        "Delete": "حذف"
+      },
+
+    "NavBar": {
+      "LogoTitle": "خدمة تصميم المواقع",
+      "LogoOman": "عمان",
+      "Request Website": "أطلب بناء موقعك الخاص"
+    },
+
+    "PaymentPage": {
+      "Our payment methods": "طرق الدفع لدينا",
+      "located in": "موقعنا السيب - مسقط - سلطنة عمان. تسطيع الدفع عن طريق إحدى هذه الطرق...",
+      "t" : "موقعنا السيب - مسقط - سلطنة عمان. تسطيع الدفع عن طريق إحدى هذه الطرق..."
+    },
+
+    "ContactPage": {
+      "Let's work together": "تواصل معنا لنقدم لك الخدمة",
+      "fillTheForm": "إملأ الفورم وإرسله لطلب بناء موقعك..",
+      "p-Your Name": "الإسم",
+      "p-Email address": "البريد الإلكتروني",
+      "p-Phone number": "رقم الهاتف",
+      "p-Whatsapp number": "رقم الواتساب",
+      "Frontend Development": "تصميم الواجهة الأمامية (Frontend)",
+      "Backend Development": "تصميم الواجهة الخلفية (Backend)",
+      "Full Stack Development": "تصميم الواجهة الكاملة (Fullstack)",
+      "p-textAreaMessage": "قم بشرح مشروعك هنا...",
+      "Sending": "جاري الإرسال...",
+      "Send message": "أرسل الرسالة",
+      "Message sent successfully": "تم الإرسال بنجاح!"
+    },
+
+    "Footer": {
+      "seriveHelpsYouFooter": "هذه خدمة تمكنك من بناء موقعك الخاص بمشروعك. كل الحقوق محفوظة والإستخدام غير المصرح للكود المصدر ممنوع.",
+      "Follow us": "Follow us"
+    }
+  }

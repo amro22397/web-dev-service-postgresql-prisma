@@ -1,0 +1,55 @@
+{
+    "HomePage": {
+      "title": "Build a website as the client need",
+      "desc": "This is a service for designing different websites for your business. We can deliver it as you want and make a full responsive web application.",
+      "requestBuilding": "Request building your website",
+      "example": "Example"
+    },
+
+    "ProjectsPage": {
+      "Add Project": "Add Project",
+      "All": "All",
+      "Fullstack": "Fullstack",
+      "Frontend": "Frontend"
+    },
+
+    "ProjectByIdPage": {
+        "Back to projects": "Back to projects",
+        "Visit the website": "Visit the website",
+        "DeleteProjectConfirm": "Are you sure you want to delete this project?",
+        "Edit": "Edit",
+        "Delete": "Delete"
+      },
+
+    "NavBar": {
+      "LogoTitle": "Web Dev Service",
+      "LogoOman": "Oman",
+      "Request Website": "Request Website"
+    },
+
+    "PaymentPage": {
+      "Our payment methods": "Our payment methods",
+      "located in": "We are located in Al-seeb, Muscat, Oman. You can pay with these methods..."
+    },
+
+    "ContactPage": {
+      "Let's work together": "Let's work together",
+      "fillTheForm": "Fill the form and send it to request building your website...",
+      "p-Your Name": "Your Name",
+      "p-Email address": "Email address",
+      "p-Phone number": "Phone number",
+      "p-Whatsapp number": "Whatsapp number",
+      "Frontend Development": "Frontend Development",
+      "Backend Development": "Backend Development",
+      "Full Stack Development": "Full Stack Development",
+      "p-textAreaMessage": "Describe your project here...",
+      "Sending": "Sending...",
+      "Send message": "Send message",
+      "Message sent successfully": "Message sent successfully!"
+    },
+
+    "Footer": {
+      "seriveHelpsYouFooter": "This is a service that helps you build a website for your business. All rights are reserved and the illegal use of the source code is forbidden.",
+      "Follow us": "Follow us"
+    }
+  }

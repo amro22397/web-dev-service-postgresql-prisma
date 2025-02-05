@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/constants/navigation.js", "src/components/AppContext.js", "src/components/SwiperImage.jsx", "src/app/contact/page.jsx", "src/constants/info.js", "src/components/Navbar.jsx", "src/components/HeroText.tsx", ".next/types/app/about/page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/z-old-constants/navigation.js", "src/z-old-components/AppContext.js", "src/z-old-components/SwiperImage.jsx", "src/app/contact/page.jsx", "src/z-old-constants/info.js", "src/z-old-components/Navbar.jsx", "src/z-old-components/HeroText.tsx", ".next/types/app/about/page.tsx"],
   "exclude": ["node_modules"]
 }

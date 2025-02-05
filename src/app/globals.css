@@ -75,11 +75,11 @@ body {
 }
 
 .payment-div {
-    @apply mx-auto px-1;
+    @apply mx-auto;
 }
 
 .fi-sun {
-    @apply text-white cursor-pointer ml-2;
+    @apply text-white cursor-pointer ml-2; 
 }
 
 .fi-moon {
