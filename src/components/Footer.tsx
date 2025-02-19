@@ -145,6 +145,8 @@ export function Footer() {
               </Link>
             </div>
           </div>
+
+          
         </div>
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-200

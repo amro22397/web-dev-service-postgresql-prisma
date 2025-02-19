@@ -16,10 +16,12 @@ const ChangeLanguage = () => {
   console.log(afterLocale);
 
   if (locale === "en") {
-    if (afterLocale === "paym") {
-      afterLocale = "payment"
+    if (afterLocale === "/paym") {
+      afterLocale = "/payment"
     }
   }
+
+  console.log(afterLocale)
 
   return (
     <Link
