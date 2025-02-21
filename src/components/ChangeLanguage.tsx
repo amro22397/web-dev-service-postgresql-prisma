@@ -5,7 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-const ChangeLanguage = () => {
+const ChangeLanguage = ({ closeMobNav } : {
+  closeMobNav: () => void
+}) => {
 
     const locale = useLocale();
 
@@ -30,7 +32,9 @@ const ChangeLanguage = () => {
         ${locale === "en" && "text-2xl"}`}
       style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
     >
-      <button className={`${locale === "en" && "text-xl"}`}>
+      <button className={`${locale === "en" && "text-xl"}`}
+      onClick={() => closeMobNav?.()}
+      >
         {locale === "ar" ? "English" : "العربية"}
       </button>
       

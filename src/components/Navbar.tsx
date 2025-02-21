@@ -98,7 +98,7 @@ export const Navbar = () => {
                 </li>
               ))}
 
-              <ChangeLanguage />
+              <ChangeLanguage closeMobNav={() => setIsMobNavOpen(false)} />
             </ul>
           </div>
 
@@ -149,7 +149,7 @@ export const Navbar = () => {
 
             <div className="flex flex-row justify-center items-center gap-1 my-1"
             dir="ltr">
-              <ChangeLanguage />
+              <ChangeLanguage closeMobNav={() => setIsMobNavOpen(false)} />
               <ThemeChanger />
             </div>
 
