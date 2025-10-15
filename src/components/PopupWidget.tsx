@@ -10,6 +10,7 @@ import {
 
 export function PopupWidget() {
 
+  const a = {};
 
   /* const handleChange = () => {
         setMessageSuccess(false);
