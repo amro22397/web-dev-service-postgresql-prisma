@@ -14,7 +14,7 @@ import AppProvider from "../z-old-components/AppContext";
 import { AppContext } from "@/context/AppContext";
 
 import AppContextProvider from "../context/AppContext";
-import { Providers } from "./2en/provider";
+// import { Providers } from "./2en/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
