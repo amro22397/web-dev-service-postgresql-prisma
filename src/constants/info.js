@@ -9,9 +9,9 @@ export const info = [
   {
     icon: <FaWhatsapp />,
     title: "Whatsapp",
-    link: "http://wa.me/+249995291772",
+    link: "http://wa.me/+96879335801",
     arTitle: "رقم الواتساب",
-    arLink: "http://wa.me/+249995291772",
+    arLink: "http://wa.me/+96879335801",
   },
   {
     icon: <FaEnvelope />,
