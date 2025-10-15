@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ContactMessages {
+  id          String   @id
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime
+  firstName   String
+  lastName    String?
+  email       String
+  phoneNumber String
+  service     String
+  message     String
+}
+
+model Project {
+  id                String   @id
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime
+  title             String
+  description       String?
+  technologies      String?
+  technologiesArray String[]
+  link              String?
+  date              String?
+  category          String?
+  imageUrls         String[]
+  youtubeLink       String?
+}
+
+model User {
+  id                   String    @id
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime
+  email                String    @unique
+  name                 String?   @unique
+  image                String?
+  hashedPassword       String?
+  isVerified           Boolean?  @default(false)
+  resetPasswordExpires DateTime?
+  resetPasswordToken   String?
+  verifyToken          String?
+  verifyTokenExpires   DateTime?
+}

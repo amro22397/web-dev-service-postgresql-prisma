@@ -48,7 +48,7 @@ max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 max-xl:grid-cols-3"
       >
         {projects.length > 0 &&
           projects.map((project: any, index: number) => (
-            <Link key={index} href={`/${locale}/projects/${project._id}`}>
+            <Link key={index} href={`/${locale}/projects/${project.id}`}>
               <div
                 key={index}
                 className="flex flex-col justify-start items-center
@@ -75,15 +75,14 @@ max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 max-xl:grid-cols-3"
                   {project.category}
                 </button>
 
-                <div className="projects-all-description">
-                  <p
-                    className="text-sm text-black
-                "
-                    style={{ fontFamily: "sans-serif" }}
-                  >
-                    {project.description}
-                  </p>
-                </div>
+                <div className="flex flex-col justify-between items-center
+             mb-4 gap-4 px-6 py-2 overflow-hidden hover:overflow-auto">
+
+                <p className="text-sm text-white text-center
+                " style={{fontFamily: "Arial, Helvetica, sans-serif"}}>{project.description}</p>
+
+            
+            </div>
               </div>
             </Link>
           ))}
