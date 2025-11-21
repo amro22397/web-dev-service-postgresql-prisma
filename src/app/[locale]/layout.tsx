@@ -20,6 +20,9 @@ import { getLocale } from "next-intl/server";
 
 import styles from "./layout.module.css"; 
 
+import { Analytics } from '@vercel/analytics/next';
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -74,7 +77,8 @@ export default async function RootLayout({
               <Navbar />
 
               <Providers>
-                <div>{children}</div>
+                {children}
+                <Analytics />
               </Providers>
 
               <Footer />

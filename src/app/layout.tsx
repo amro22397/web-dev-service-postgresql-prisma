@@ -17,6 +17,9 @@ import AppContextProvider from "../context/AppContext";
 import { Providers } from "./[locale]/provider";
 // import { Providers } from "./2en/provider";
 
+import { Analytics } from '@vercel/analytics/next';
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -60,7 +63,8 @@ export default function RootLayout({
           */}
 
             <Providers>
-              <div>{children}</div>
+              {children}
+              <Analytics />
             </Providers>
           </AppContextProvider>
         </body>
