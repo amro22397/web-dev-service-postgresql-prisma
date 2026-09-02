@@ -21,7 +21,7 @@ import { useLocale, useTranslations } from 'next-intl'
 
 
 const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
-    isAbsolute : boolean, showRequestForm: boolean, setShowRequestForm: any
+    isAbsolute?: boolean, showRequestForm?: boolean, setShowRequestForm?: any
 }) => {
 
     const [yourName, setYourName] = useState('');

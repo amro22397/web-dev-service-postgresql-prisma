@@ -56,19 +56,29 @@ export const Navbar = () => {
             </span>
             <div className="flex flex-col items-center relative">
               <span
-                className="font-semibold tracking-wide"
+                className="font-semibold tracking-wide text-3xl"
                 style={{ fontFamily: "Readex Pro" }}
+                dir="ltr"
               >
-                {navBar("LogoTitle")}
+                <span
+                  className="bg-blue-600 text-white px-[11.75px] py-[5.5px] rounded-[8px]"
+                  style={{ fontFamily: "Readex Pro" }}
+                >
+                  amro97
+                </span>{" "}
+                <span className="text-blue-600 dark:text-white" style={{ fontFamily: "Readex Pro" }}>
+                  Team
+                </span>
+                {/* {navBar("LogoTitle")} */}
               </span>
 
-              <span
+              {/* <span
                 style={{ fontFamily: "Readex Pro" }}
                 className="text-sm absolute top-[31.04px] left-[18px]
         font-bold tracking-widest text-red-600"
               >
                 {navBar("LogoOman")}
-              </span>
+              </span> */}
             </div>
           </span>
         </Link>
@@ -79,7 +89,7 @@ export const Navbar = () => {
           <div className="hidden text-center lg:flex lg:flex-row lg-justify-end lg:items-center">
             <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
               {navigation.map((menu, index) => (
-                <li className="mr-3 nav__item">
+                <li className="mr-3 nav__item" key={index}>
                   <Link
                     href={`/${locale}${menu.href}`}
                     key={index}
@@ -131,7 +141,7 @@ export const Navbar = () => {
           <div className="flex flex-col items-center w-full my-8 lg:hidden">
             {navigation.map((item, index) => (
               <Link
-              href={`/${locale}${item.href}`}
+                href={`/${locale}${item.href}`}
                 key={index}
                 onClick={() => {
                   setShowRequestForm(false);
@@ -147,8 +157,10 @@ export const Navbar = () => {
               </Link>
             ))}
 
-            <div className="flex flex-row justify-center items-center gap-1 my-1"
-            dir="ltr">
+            <div
+              className="flex flex-row justify-center items-center gap-1 my-1"
+              dir="ltr"
+            >
               <ChangeLanguage closeMobNav={() => setIsMobNavOpen(false)} />
               <ThemeChanger />
             </div>

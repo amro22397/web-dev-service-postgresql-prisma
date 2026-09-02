@@ -14,6 +14,32 @@ import ProjectById from './ProjectById';
 // import mongoose from 'mongoose';
 import { getLocale } from 'next-intl/server';
 import prisma from '@/lib/prisma';
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; id: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    metadataBase: new URL("https://www.wds-oman.com"),
+
+    title: {
+      absolute: locale === "ar" ? "تفاصيل المشروع" : "Project Details",
+    },
+
+    description:
+      locale === "ar"
+        ? "اطّلع على تفاصيل هذا المشروع وتقنياته وتصميمه ضمن أعمال خدمة تطوير الويب في عُمان."
+        : "View this project's details, technologies, and design as part of the Web Dev Service Oman portfolio.",
+
+    twitter: {
+      card: "summary_large_image",
+    },
+  };
+}
 
 
 

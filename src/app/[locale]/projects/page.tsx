@@ -7,6 +7,32 @@ import AddProject from "../../../components/AddProject";
 import ProjectFilter, { Project } from "../../../components/ProjectsFilter";
 import { revalidatePath } from "next/cache";
 import prisma from "@/lib/prisma";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    metadataBase: new URL("https://www.wds-oman.com"),
+
+    title: {
+      absolute: locale === "ar" ? "مشاريعنا" : "Our Projects",
+    },
+
+    description:
+      locale === "ar"
+        ? "تصفح مجموعة من مشاريع تصميم وتطوير المواقع والتطبيقات التي أنجزتها خدمة تطوير الويب في عُمان."
+        : "Browse a selection of website and application design and development projects completed by Web Dev Service Oman.",
+
+    twitter: {
+      card: "summary_large_image",
+    },
+  };
+}
 
 const page = async () => {
   // mongoose.connect(process.env.MONGO_URL as string)

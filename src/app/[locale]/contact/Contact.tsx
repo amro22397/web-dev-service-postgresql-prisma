@@ -1,16 +1,17 @@
 'use client'
 
-import React, { useState } from 'react'
-import { info } from '../../../constants/info'
-import './page.css'
+import { usePathname } from 'next/navigation';
+// import React from 'react'
 import Link from 'next/link'
 import ContactForm from '../../../components/ContactForm'
-import { usePathname } from 'next/navigation'
+// import { usePathname } from 'next/navigation'
+import React, { useState } from 'react'
+import { info } from '../../../constants/info'
 
-const page = () => {
+const Contact = () => {
 
-  const pathName = usePathname();
-    
+    const pathName = usePathname() as any;
+
   return (
     <div 
     className='contact-form'
@@ -67,4 +68,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Contact

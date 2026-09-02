@@ -3,6 +3,11 @@
       "title": "Build a website as the client need",
       "desc": "This is a service for designing different websites for your business. We can deliver it as you want and make a full responsive web application.",
       "requestBuilding": "Request building your website",
+       "Advertising and Promotion": "Advertising and Promotion",
+      "Whatsapp": "Whatsapp",
+      "Email": "Email",
+      "developmentTypesTitle": "What is the meaning of Frontend, Backend and Fullstack?",
+      "developmentTypesDescription": "Frontend is the part of a website that users see and interact with. Backend handles the server, application logic, databases, and authentication. Fullstack combines both frontend and backend development to build a complete web application.",
       "example": "Example"
     },
 
@@ -22,7 +27,7 @@
       },
 
     "NavBar": {
-      "LogoTitle": "Web Dev Service",
+      "LogoTitle": "amro97 Team",
       "LogoOman": "Oman",
       "Request Website": "Request Website"
     },

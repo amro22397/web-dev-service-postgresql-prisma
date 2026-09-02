@@ -59,7 +59,11 @@ const ProjectsFilter = (
         res.data.data.filter(
           (item: Project) =>
             item.id !== "2cbd18f4-06f8-48b0-b3c7-cd994e94938c" &&
-            item.id !== "4d049ffb-afe9-46c2-998f-740cfdc1fe41",
+            item.id !== "4d049ffb-afe9-46c2-998f-740cfdc1fe41" &&
+            !(
+              category === "All" &&
+              item.category?.replace(/[^a-z]/gi, "").toLowerCase() === "uiux"
+            ),
         ),
       );
     } catch (error) {
