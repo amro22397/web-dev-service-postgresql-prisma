@@ -29,7 +29,12 @@
     "NavBar": {
       "LogoTitle": "amro97 Team",
       "LogoOman": "Oman",
-      "Request Website": "Request Website"
+      "Request Website": "Request Website",
+      "Services": "Services",
+      "Projects": "Projects",
+      "Payment methods": "Payment methods",
+      "About us": "About us",
+      "Contact us": "Contact us"
     },
 
     "PaymentPage": {
@@ -50,7 +55,57 @@
       "p-textAreaMessage": "Describe your project here...",
       "Sending": "Sending...",
       "Send message": "Send message",
-      "Message sent successfully": "Message sent successfully!"
+      "Message sent successfully": "Message sent successfully!",
+      "Form is submitted successfully": "Form is submitted successfully"
+    },
+
+    "AboutPage": {
+      "hero": {
+        "eyebrow": "About amro97 Team",
+        "title": "Websites built for your business",
+        "description": "We are a web development team based in Seeb, Muscat, Oman. We help businesses, entrepreneurs, and organizations turn their ideas into fast, responsive, and practical digital products.",
+        "primaryAction": "Discuss your project",
+        "secondaryAction": "View our projects",
+        "locationLabel": "Seeb, Muscat",
+        "worldwideLabel": "Worldwide",
+        "responsiveLabel": "Responsive by default",
+        "deviceLabel": "Mobile · Tablet · Desktop"
+      },
+      "services": {
+        "eyebrow": "What we build",
+        "title": "Digital solutions designed around your goals",
+        "description": "From an informative business website to a complete web application, we focus on clear design, dependable development, and an experience that works across modern devices.",
+        "websiteTitle": "Business websites",
+        "websiteDescription": "Professional websites that explain your services clearly, strengthen your online presence, and help customers find and contact you.",
+        "webAppTitle": "Web applications",
+        "webAppDescription": "Custom web applications built around your workflow, users, and business requirements, from frontend experiences to full-stack solutions.",
+        "responsiveTitle": "Responsive experiences",
+        "responsiveDescription": "Mobile-friendly interfaces designed to remain clear, accessible, and easy to use on phones, tablets, laptops, and desktop screens."
+      },
+      "location": {
+        "eyebrow": "Based in Oman, working worldwide",
+        "title": "Local understanding with global reach",
+        "description": "Our team is located in Seeb, Muscat, Oman. Remote collaboration allows us to serve clients throughout Oman and work with people and businesses anywhere in the world.",
+        "localTitle": "Seeb, Muscat, Oman",
+        "localDescription": "We understand the local market and can work closely with businesses and entrepreneurs across the Sultanate of Oman.",
+        "worldwideTitle": "Available worldwide",
+        "worldwideDescription": "Distance is not a barrier. We can plan, communicate, build, and deliver projects remotely for clients in any country."
+      },
+      "values": {
+        "eyebrow": "How we work",
+        "title": "A clear and dependable development process",
+        "communicationTitle": "Clear communication",
+        "communicationDescription": "We listen to your requirements, explain technical decisions in plain language, and keep the project direction clear.",
+        "qualityTitle": "Purposeful quality",
+        "qualityDescription": "We build with usability, performance, responsiveness, and maintainability in mind—not appearance alone.",
+        "supportTitle": "Practical support",
+        "supportDescription": "We help you understand the delivered product and remain available to discuss improvements and future development."
+      },
+      "cta": {
+        "title": "Have a website or web application in mind?",
+        "description": "Tell us what you want to build, who it is for, and what it should achieve. We will help you identify the right way forward.",
+        "action": "Contact the team"
+      }
     },
 
     "Footer": {

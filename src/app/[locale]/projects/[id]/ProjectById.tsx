@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SwiperImage from "../../../../components/SwiperImage";
 // import { FaArrowRight } from "react-icons/fa";
 // import { IoMdArrowBack } from "react-icons/io";
@@ -14,7 +14,6 @@ import Link from "next/link";
 
 // import { projects } from "../../../../public/Constants";
 
-import { useParams } from "next/navigation";
 // import mongoose from "mongoose";
 // import { Project } from "../../../../models/project";
 
@@ -22,47 +21,58 @@ import EditDeleteButtons from "../../../../components/EditDeleteButtons";
 // import axios from "axios";
 // import useSWR from "swr";
 import { useTranslations } from "next-intl";
+import { Project } from "@/types";
+import { useParams } from "next/navigation";
+import axios from "axios";
+
+// 
 
 const ProjectById = ({
-  // /*id*/ email,
-  projects,
   locale,
+  // project,
 }: {
-  // id?: string | undefined,
-  // email?: string | null | undefined;
-  jProject?: any;
-  projects?: any;
   locale?: string | null | undefined;
+  // project: Project;
 }) => {
+  // const jProject = project;
+  // const id = project.id;
+
   const params = useParams<any>();
 
   const id = params.id;
 
-  const project = projects.find((project: any) => project.id === id);
-  const jProject = JSON.parse(JSON.stringify(project));
-
-  console.log(jProject);
-
   const projectById = useTranslations("ProjectByIdPage");
 
-  // const [jProject, setJProject] = useState(null);
+  const [projects, setProjects] = useState<Project[]>([]);
 
-  // const fetchProjectById = async() => {
-  //     await axios.get(`/api/project?id=${id}`)
-  //     .then(res => {
-  //         console.log(res.data);
-  //         setJProject(res.data.data);
-  //         console.log(jProject)
-  //     })
-  //     .catch(err => {
-  //         console.log(err);
-  //     })
+  const jProject = projects.find((project) => project.id === id);
 
-  // }
 
-  // useEffect(() => {
-  //     fetchProjectById();
-  // }, []);
+  const getProjects = async () => {
+    const res = await axios.get(`/api/get-projects`);
+
+    setProjects(res.data.data);
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await getProjects();
+    };
+
+    fetchData();
+  }, []);
+
+  if (!jProject) {
+    return (
+      <div className="flex min-h-[54vh] items-center justify-center">
+        <div
+          className="h-8 w-8 animate-spin rounded-full border-4 border-indigo-200 border-t-indigo-600 dark:border-slate-700 dark:border-t-indigo-300"
+          role="status"
+          aria-label="Loading project"
+        />
+      </div>
+    );
+  }
 
   return (
     <div
@@ -148,7 +158,7 @@ const ProjectById = ({
               className="flex flex-wrap gap-6
                         text-md font-semibold mt-2 mx-[6px]"
             >
-              {jProject.technologiesArray.map((tech: any, index: number) => (
+              {jProject.technologiesArray?.map((tech: any, index: number) => (
                 <span
                   key={index}
                   className="bg-gray-300 px-4 py-[2.5px] rounded-full
@@ -172,7 +182,7 @@ const ProjectById = ({
             <div className="border border-black/20"></div>
 
             <div className="flex items-center gap-4">
-              {jProject.link.trim(" ") === "" ? (
+              {!jProject.link?.trim() ? (
                 <></>
               ) : (
                 <Link href={jProject.link} target="_blank">

@@ -103,7 +103,7 @@ export const Navbar = () => {
                         dark:focus:bg-gray-800 focus:outline-none hover:underline
                         ${menu.isHidden ? "hidden" : ""}`}
                   >
-                    {locale === "ar" ? menu.arName : menu.name}
+                    {navBar(menu.translationKey)}
                   </Link>
                 </li>
               ))}
@@ -153,7 +153,7 @@ export const Navbar = () => {
               dark:focus:bg-gray-800 focus:outline-none hover:underline
               ${item.isHidden ? "hidden" : ""}`}
               >
-                {locale === "ar" ? item.arName : item.name}
+                {navBar(item.translationKey)}
               </Link>
             ))}
 
