@@ -18,6 +18,7 @@ import { IoMdClose } from "react-icons/io";
 
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
+import ContactPhoneField from "../app/components/contact/ContactPhoneField";
 
 
 const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
@@ -52,7 +53,7 @@ const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
               const object = Object.fromEntries(formData);
               const json = JSON.stringify(object);
     
-            if (yourName === '' || phoneNumber === '' || email === '' || message === '' || whatsappNumber === '') {
+            if (yourName === '' || email === '' || message === '' || whatsappNumber === '') {
               setMessageSuccess(false);
               
               return;
@@ -133,22 +134,33 @@ const ContactForm = ({ isAbsolute, showRequestForm, setShowRequestForm } : {
               }}
               style={{borderRadius: ".25rem"}} />
 
-              <Input type="phone" placeholder={contactPage("p-Phone number")} name="Phone number"
-              className={`${inputClassName}`}
-              value={phoneNumber} onChange={e => {
-                handleChange();
-                setPhoneNumber(e.target.value)
-              }}
-              style={{borderRadius: ".25rem"}} />
+              </div>
 
-              <Input type="text" placeholder={contactPage("p-Whatsapp number")} name="Whatsapp number"
-              className={`${inputClassName}`}
-              value={whatsappNumber} onChange={e => {
-                handleChange();
-                setWhatsappNumber(e.target.value)
-              }}
-              style={{borderRadius: ".25rem"}} />
+              <div className="grid gap-4 sm:grid-cols-2">
+                <ContactPhoneField
+                  id="contact-phone"
+                  label={contactPage("p-Phone number")}
+                  locale={locale}
+                  name="Phone number"
+                  value={phoneNumber}
+                  onChange={(phone) => {
+                    handleChange();
+                    setPhoneNumber(phone);
+                  }}
+                />
 
+                <ContactPhoneField
+                  id="contact-whatsapp"
+                  label={contactPage("p-Whatsapp number")}
+                  locale={locale}
+                  name="Whatsapp number"
+                  value={whatsappNumber}
+                  required
+                  onChange={(phone) => {
+                    handleChange();
+                    setWhatsappNumber(phone);
+                  }}
+                />
               </div>
 
               <select onChange={handleChange} id="service"

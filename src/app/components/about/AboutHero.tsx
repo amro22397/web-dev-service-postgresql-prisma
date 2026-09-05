@@ -29,7 +29,7 @@ export default function AboutHero(props: AboutHeroProps) {
     <section className="relative isolate overflow-hidden rounded-[2rem] border border-indigo-100 bg-white px-6 py-10 shadow-[0_24px_80px_-40px_rgba(79,70,229,0.45)] dark:border-white/10 dark:bg-neutral-950 sm:px-10 sm:py-14 lg:px-14 lg:py-16">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(99,102,241,0.13),transparent_34%),radial-gradient(circle_at_90%_85%,rgba(14,165,233,0.12),transparent_30%)] dark:bg-[radial-gradient(circle_at_15%_10%,rgba(99,102,241,0.18),transparent_34%),radial-gradient(circle_at_90%_85%,rgba(14,165,233,0.12),transparent_30%)]" />
       <div className="pointer-events-none absolute inset-0 -z-10 opacity-[0.035] dark:opacity-[0.06]" style={{ backgroundImage: "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
-      <div className="relative grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+      <div className="relative grid items-center gap-14 lg:grid-cols-[1fr_0.95fr] lg:gap-20 xl:gap-24">
         <div>
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-indigo-700 dark:border-indigo-400/20 dark:bg-indigo-400/10 dark:text-indigo-300">
             <span className="h-2 w-2 rounded-full bg-indigo-500" />
