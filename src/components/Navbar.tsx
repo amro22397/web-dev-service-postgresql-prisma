@@ -83,7 +83,7 @@ export const Navbar = () => {
         </Link>
 
         {/* get started  */}
-        <div className="gap-3 nav__item mr-3 lg:flex ml-auto lg:ml-0 lg:order-2">
+        <div className="gap-3 nav__item mr-3 lg:flex lg:items-center ml-auto lg:ml-0 lg:order-2">
           {/* menu lg and above */}
           <div className="hidden text-center lg:flex lg:flex-row lg-justify-end lg:items-center">
             <ul
@@ -116,7 +116,7 @@ export const Navbar = () => {
             </ul>
           </div>
 
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex lg:items-center">
             <ThemeChanger />
           </div>
 
