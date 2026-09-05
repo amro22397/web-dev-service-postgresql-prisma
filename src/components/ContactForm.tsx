@@ -126,7 +126,9 @@ const ContactForm = ({
         >
           {contactPage("Let's work together")}
         </h3>
-        <p className="text-black">{contactPage("fillTheForm")}</p>
+        <p className="text-slate-800 dark:text-slate-200">
+          {contactPage("fillTheForm")}
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Input

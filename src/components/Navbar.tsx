@@ -4,11 +4,10 @@ import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import { navigation } from "../constants/navigation";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 import RquestWebsite from "./RquestWebsite";
 import { IoMdMenu } from "react-icons/io";
-import { changeLanguageClassName } from "@/z-old-constants/eng-and-ar";
 import { AppContext, AppContextType } from "@/context/AppContext";
 
 import { useLocale, useTranslations } from "next-intl";
@@ -29,7 +28,7 @@ export const Navbar = () => {
   // const [isMobNavOpen, setIsMobNavOpen] = useState(false);
 
   const locale = useLocale();
-  console.log(locale);
+  const isArabic = locale === "ar";
 
   return (
     <div className="w-full">
@@ -87,9 +86,12 @@ export const Navbar = () => {
         <div className="gap-3 nav__item mr-3 lg:flex ml-auto lg:ml-0 lg:order-2">
           {/* menu lg and above */}
           <div className="hidden text-center lg:flex lg:flex-row lg-justify-end lg:items-center">
-            <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
+            <ul
+              dir={isArabic ? "rtl" : "ltr"}
+              className="items-center justify-end flex-1 gap-4 pt-6 list-none lg:pt-0 lg:flex"
+            >
               {navigation.map((menu, index) => (
-                <li className="mr-3 nav__item" key={index}>
+                <li className="nav__item shrink-0" key={index}>
                   <Link
                     href={`/${locale}${menu.href}`}
                     key={index}
@@ -97,11 +99,13 @@ export const Navbar = () => {
                       setShowRequestForm(false);
                       setIsMobNavOpen(false);
                     }}
-                    className={`w-full px-1 py-2 text-gray-500 rounded-md
+                    className={`block w-full whitespace-nowrap px-1 py-2 text-gray-500 rounded-md
                        dark:text-gray-100 hover:text-indigo-500 focus:text-indigo-500
                        dark:hover:text-indigo-300 dark:focus:text-indigo-300 focus:bg-indigo-100
-                        dark:focus:bg-gray-800 focus:outline-none hover:underline
+                        dark:focus:bg-gray-800 focus:outline-none hover:underline leading-relaxed
+                        ${isArabic ? "font-medium" : ""}
                         ${menu.isHidden ? "hidden" : ""}`}
+                    style={isArabic ? { fontFamily: "Readex Pro, Arial, sans-serif" } : undefined}
                   >
                     {navBar(menu.translationKey)}
                   </Link>
@@ -138,7 +142,10 @@ export const Navbar = () => {
 
         {/* max lg nav menu */}
         {isMobNavOpen && (
-          <div className="flex flex-col items-center w-full my-8 lg:hidden">
+          <div
+            dir={isArabic ? "rtl" : "ltr"}
+            className="flex flex-col items-center w-full my-8 lg:hidden"
+          >
             {navigation.map((item, index) => (
               <Link
                 href={`/${locale}${item.href}`}
@@ -147,11 +154,13 @@ export const Navbar = () => {
                   setShowRequestForm(false);
                   setIsMobNavOpen(false);
                 }}
-                className={`px-4 py-2 text-gray-500 rounded-md
+                className={`px-4 py-2 text-gray-500 rounded-md leading-relaxed
              dark:text-gray-100 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100
              dark:hover:text-indigo-300 dark:focus:text-indigo-300
               dark:focus:bg-gray-800 focus:outline-none hover:underline
+              ${isArabic ? "font-medium" : ""}
               ${item.isHidden ? "hidden" : ""}`}
+                style={isArabic ? { fontFamily: "Readex Pro, Arial, sans-serif" } : undefined}
               >
                 {navBar(item.translationKey)}
               </Link>
