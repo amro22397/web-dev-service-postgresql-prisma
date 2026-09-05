@@ -55,7 +55,8 @@
       "p-textAreaMessage": "Describe your project here...",
       "Sending": "Sending...",
       "Send message": "Send message",
-      "Message sent successfully": "Message sent successfully!"
+      "Message sent successfully": "Message sent successfully!",
+      "Form is submitted successfully": "Form is submitted successfully"
     },
 
     "AboutPage": {

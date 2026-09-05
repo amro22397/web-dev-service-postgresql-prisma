@@ -57,7 +57,8 @@
     "p-textAreaMessage": "قم بشرح مشروعك هنا...",
     "Sending": "جاري الإرسال...",
     "Send message": "أرسل الرسالة",
-    "Message sent successfully": "تم الإرسال بنجاح!"
+    "Message sent successfully": "تم الإرسال بنجاح!",
+    "Form is submitted successfully": "تم الإرسال بنجاح"
   },
 
   "AboutPage": {

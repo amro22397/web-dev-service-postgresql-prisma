@@ -49,7 +49,7 @@ export async function generateMetadata({
     // },
 
     title: {
-      default: locale === "ar" ? title.ar : title.en,
+      default: locale === "ar" ? `${title.ar} | أطلب بناء موقعك الخاص` : `${title.en} | Request building your website`,
       template: locale === "ar" ? `%s - ${title.ar}` : `%s - ${title.en}`,
     },
 
