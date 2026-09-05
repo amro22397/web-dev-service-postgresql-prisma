@@ -3,11 +3,15 @@
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import axios from "axios";
 
 import { Loader2 } from "lucide-react";
+
+const PROJECT_CATEGORY_STORAGE_KEY = "projects-selected-category";
+const projectCategories = ["All", "Fullstack", "Frontend"] as const;
+type ProjectCategory = (typeof projectCategories)[number];
 
 export type Project = {
   id: string;
@@ -39,15 +43,26 @@ const ProjectsFilter = (
 
   const [projects, setProjects] = useState([]);
 
-  const [category, setCategory] = useState("Fullstack");
+  const [category, setCategory] = useState<ProjectCategory>("Fullstack");
+  const [hasLoadedStoredCategory, setHasLoadedStoredCategory] = useState(false);
 
-  const [pageLoading, setPageLoading] = useState(false);
+  const [pageLoading, setPageLoading] = useState(true);
 
   const locale = useLocale();
 
   const projectPage = useTranslations("ProjectsPage");
 
-  const getProject = async () => {
+  const selectCategory = (nextCategory: ProjectCategory) => {
+    setCategory(nextCategory);
+
+    try {
+      localStorage.setItem(PROJECT_CATEGORY_STORAGE_KEY, nextCategory);
+    } catch (error) {
+      console.warn(`Unable to save the project category: ${error}`);
+    }
+  };
+
+  const getProject = useCallback(async () => {
     setPageLoading(true);
 
     try {
@@ -60,6 +75,7 @@ const ProjectsFilter = (
           (item: Project) =>
             item.id !== "2cbd18f4-06f8-48b0-b3c7-cd994e94938c" &&
             item.id !== "4d049ffb-afe9-46c2-998f-740cfdc1fe41" &&
+            item.title.trim().toLowerCase() !== "web dev service" &&
             !(
               category === "All" &&
               item.category?.replace(/[^a-z]/gi, "").toLowerCase() === "uiux"
@@ -75,7 +91,7 @@ const ProjectsFilter = (
     }
 
     setPageLoading(false);
-  };
+  }, [category, locale]);
 
   // const filteredProjects = useMemo<Project[]>(() => {
   //   return projects.filter(
@@ -92,8 +108,27 @@ const ProjectsFilter = (
   // );
 
   useEffect(() => {
-    getProject();
-  }, [locale, category]);
+    try {
+      const storedCategory = localStorage.getItem(PROJECT_CATEGORY_STORAGE_KEY);
+
+      if (
+        storedCategory &&
+        projectCategories.includes(storedCategory as ProjectCategory)
+      ) {
+        setCategory(storedCategory as ProjectCategory);
+      }
+    } catch (error) {
+      console.warn(`Unable to restore the project category: ${error}`);
+    } finally {
+      setHasLoadedStoredCategory(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (hasLoadedStoredCategory) {
+      getProject();
+    }
+  }, [getProject, hasLoadedStoredCategory]);
 
   if (pageLoading) {
     return (
@@ -111,15 +146,15 @@ const ProjectsFilter = (
         style={{ fontFamily: "sans-serif" }}
       >
         <div className="flex flex-row gap-5">
-          <div id="filter-key" onClick={() => setCategory("All")}>
+          <div id="filter-key" onClick={() => selectCategory("All")}>
             {projectPage("All")}
           </div>
 
-          <div id="filter-key" onClick={() => setCategory("Fullstack")}>
+          <div id="filter-key" onClick={() => selectCategory("Fullstack")}>
             {projectPage("Fullstack")}
           </div>
 
-          <div id="filter-key" onClick={() => setCategory("Frontend")}>
+          <div id="filter-key" onClick={() => selectCategory("Frontend")}>
             {projectPage("Frontend")}
           </div>
         </div>

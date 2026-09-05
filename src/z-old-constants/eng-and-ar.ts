@@ -21,6 +21,6 @@ export const navigationIsHidden = {
         isHidden: false,
     },
     About: {
-        isHidden: true,
+        isHidden: false,
     },
 }
