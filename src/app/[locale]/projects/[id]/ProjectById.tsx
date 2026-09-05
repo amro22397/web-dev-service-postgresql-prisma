@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SwiperImage from "../../../../components/SwiperImage";
 // import { FaArrowRight } from "react-icons/fa";
 // import { IoMdArrowBack } from "react-icons/io";
@@ -22,20 +22,57 @@ import EditDeleteButtons from "../../../../components/EditDeleteButtons";
 // import useSWR from "swr";
 import { useTranslations } from "next-intl";
 import { Project } from "@/types";
+import { useParams } from "next/navigation";
+import axios from "axios";
 
 const ProjectById = ({
   email,
   locale,
-  project,
+  // project,
 }: {
   email?: string | null | undefined;
   locale?: string | null | undefined;
-  project: Project;
+  // project: Project;
 }) => {
-  const jProject = project;
-  const id = project.id;
+  // const jProject = project;
+  // const id = project.id;
+
+  const params = useParams<any>();
+
+  const id = params.id;
 
   const projectById = useTranslations("ProjectByIdPage");
+
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  const jProject = projects.find((project) => project.id === id);
+
+
+  const getProjects = async () => {
+    const res = await axios.get(`/api/get-projects`);
+
+    setProjects(res.data.data);
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await getProjects();
+    };
+
+    fetchData();
+  }, []);
+
+  if (!jProject) {
+    return (
+      <div className="flex min-h-[54vh] items-center justify-center">
+        <div
+          className="h-8 w-8 animate-spin rounded-full border-4 border-indigo-200 border-t-indigo-600 dark:border-slate-700 dark:border-t-indigo-300"
+          role="status"
+          aria-label="Loading project"
+        />
+      </div>
+    );
+  }
 
   return (
     <div

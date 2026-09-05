@@ -161,6 +161,7 @@ const ProjectsFilter = (
       </div>
 
       <div
+        dir="ltr"
         className="grid grid-cols-3 gap-7 mt-10
 max-sm:grid-cols-1 max-md:grid-cols-2 max-lg:grid-cols-2 max-xl:grid-cols-3"
       >

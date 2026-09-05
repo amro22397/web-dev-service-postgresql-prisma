@@ -144,11 +144,11 @@ export default async function page({
 
     // const jAllProjects = JSON.parse(JSON.stringify(allProjects));
 
-  const project = await getProject(id);
+  // const project = await getProject(id);
 
-  if (!project) {
-    notFound();
-  }
+  // if (!project) {
+  //   notFound();
+  // }
 
     // const project = jAllProjects.find((project: any) => project._id === id);
     // const jProject = JSON.parse(JSON.stringify(project));
@@ -170,12 +170,12 @@ export default async function page({
     <>
     <ProjectById /* id={id} jProject={jProject} */
     email={session?.user?.email}
-    project={project}
+    // project={project}
     locale={locale}  />
 
     {/* <pre className="">{id}</pre> */}
     {/* <pre>{JSON.stringify(jProject, null, 2)}</pre> */}
-    <pre className="hidden">{JSON.stringify(project, null, 2)}</pre>
+    {/* <pre className="hidden">{JSON.stringify(project, null, 2)}</pre> */}
     </>
   )
 }
