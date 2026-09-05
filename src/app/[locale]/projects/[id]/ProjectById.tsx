@@ -28,11 +28,9 @@ import axios from "axios";
 // 
 
 const ProjectById = ({
-  email,
   locale,
   // project,
 }: {
-  email?: string | null | undefined;
   locale?: string | null | undefined;
   // project: Project;
 }) => {

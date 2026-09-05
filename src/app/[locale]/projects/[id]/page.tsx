@@ -16,7 +16,6 @@ import { getLocale } from 'next-intl/server';
 import prisma from '@/lib/prisma';
 import type { Metadata } from "next";
 import { title } from '@/constants/title';
-import { getSession } from '@/actions/getUser';
 import { Project } from '@/types';
 import { notFound } from "next/navigation";
 
@@ -159,9 +158,6 @@ export default async function page({
     //  const session = await getSession();
     //   console.log(session?.user?.email)
 
-    const session = await getSession();
-  console.log(session?.user?.email);
-
       const locale = await getLocale();
 
   return (
@@ -169,7 +165,6 @@ export default async function page({
 
     <>
     <ProjectById /* id={id} jProject={jProject} */
-    email={session?.user?.email}
     // project={project}
     locale={locale}  />
 
