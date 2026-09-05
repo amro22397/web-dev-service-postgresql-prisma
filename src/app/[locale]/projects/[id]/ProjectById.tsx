@@ -25,6 +25,8 @@ import { Project } from "@/types";
 import { useParams } from "next/navigation";
 import axios from "axios";
 
+// 
+
 const ProjectById = ({
   email,
   locale,
