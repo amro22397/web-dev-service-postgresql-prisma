@@ -76,10 +76,7 @@ const ProjectsFilter = (
             item.id !== "2cbd18f4-06f8-48b0-b3c7-cd994e94938c" &&
             item.id !== "4d049ffb-afe9-46c2-998f-740cfdc1fe41" &&
             item.title.trim().toLowerCase() !== "web dev service" &&
-            !(
-              category === "All" &&
-              item.category?.replace(/[^a-z]/gi, "").toLowerCase() === "uiux"
-            ),
+            item.category?.replace(/[\s/.-]/g, "").toLowerCase() !== "uiux",
         ),
       );
     } catch (error) {

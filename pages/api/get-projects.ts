@@ -54,7 +54,11 @@ export default async function handler(
       // });
 
       const projects = await prisma.project.findMany({
-        where: { category: { contains: urlCategory, mode: "insensitive" } },
+        where: {
+          category: { contains: urlCategory, mode: "insensitive" },
+          // UI/UX projects are intentionally hidden from the public projects page.
+          NOT: { category: { equals: "UI/UX", mode: "insensitive" } },
+        },
         orderBy: { createdAt: "desc" },
       });
 
