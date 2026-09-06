@@ -37,7 +37,7 @@ export const Navbar = () => {
       />
 
       <nav
-        dir="ltr"
+        dir={isArabic ? "rtl" : "ltr"}
         className="container relative flex min-h-20 flex-wrap items-center justify-between
           px-4 py-5 mx-auto sm:min-h-24 sm:px-6 sm:py-6 lg:py-8 lg:justify-between xl:px-1"
       >
@@ -91,7 +91,10 @@ export const Navbar = () => {
         </Link>
 
         {/* get started  */}
-        <div className="nav__item ml-auto hidden items-center gap-3 lg:flex lg:order-2">
+        <div
+          dir={isArabic ? "rtl" : "ltr"}
+          className="nav__item hidden items-center gap-3 lg:ml-0 lg:flex lg:flex-row lg:order-2"
+        >
           {/* menu lg and above */}
           <div className="hidden text-center lg:flex lg:flex-row lg-justify-end lg:items-center">
             <ul
