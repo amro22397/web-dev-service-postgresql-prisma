@@ -1,3 +1,61 @@
+// export const keywordsLayoutArray = {
+//   ar: [
+//     "amro97 Team",
+//     "فريق amro97",
+//     "تصميم مواقع",
+//     "تصميم مواقع إلكترونية",
+//     "تطوير مواقع",
+//     "تطوير مواقع إلكترونية",
+//     "برمجة مواقع",
+//     "إنشاء موقع إلكتروني",
+//     "إنشاء مواقع",
+//     "بناء مواقع",
+//     "مطور مواقع",
+//     "مبرمج مواقع",
+//     "شركة تصميم مواقع",
+//     "خدمات تصميم المواقع",
+//     "خدمات تطوير المواقع",
+//     "تصميم متجر إلكتروني",
+//     "برمجة متجر إلكتروني",
+//     "تطوير تطبيقات الويب",
+//     "مواقع احترافية",
+//     "تصميم مواقع للشركات",
+//     "تصميم مواقع للأعمال",
+//     "Next.js",
+//     "React",
+//     "TypeScript",
+//   ],
+
+//   en: [
+//     "amro97 Team",
+//     "amro97 web development",
+//     "web development",
+//     "website development",
+//     "website design",
+//     "web design",
+//     "website developer",
+//     "web developer",
+//     "professional website development",
+//     "custom website development",
+//     "business website development",
+//     "company website development",
+//     "web development services",
+//     "website design services",
+//     "build a website",
+//     "create a website",
+//     "ecommerce website development",
+//     "web application development",
+//     "full stack web development",
+//     "Next.js development",
+//     "React development",
+//     "TypeScript development",
+//     "Next.js developer",
+//     "React developer",
+//   ],
+// };
+
+
+
 export const keywordsLayoutArray = {
   ar: [
     "amro97 Team",
@@ -21,6 +79,46 @@ export const keywordsLayoutArray = {
     "مواقع احترافية",
     "تصميم مواقع للشركات",
     "تصميم مواقع للأعمال",
+
+    // Agency keywords
+    "وكالة تطوير مواقع",
+    "وكالة تطوير مواقع إلكترونية",
+    "شركة تطوير مواقع",
+    "شركة تطوير مواقع إلكترونية",
+    "وكالة تصميم مواقع",
+
+    // Specialized development
+    "وكالة تطوير Next.js",
+    "شركة تطوير Next.js",
+    "وكالة تطوير React",
+    "شركة تطوير React",
+    "تطوير مواقع Full Stack",
+    "تطوير مواقع متكاملة",
+    "تطوير مواقع للشركات",
+    "تطوير مواقع الأعمال",
+
+    // Arabic & English websites
+    "تطوير مواقع عربية وإنجليزية",
+    "تصميم مواقع عربية وإنجليزية",
+    "تطوير مواقع ثنائية اللغة",
+    "تصميم مواقع ثنائية اللغة",
+
+    // Projects / case studies
+    "مشاريع تطوير مواقع",
+    "أعمال تطوير مواقع",
+    "نماذج أعمال تصميم مواقع",
+    "دراسات حالة تطوير مواقع",
+
+    // Client search intent
+    "كم تكلفة إنشاء موقع إلكتروني",
+    "تكلفة تصميم موقع إلكتروني",
+    "تكلفة تطوير موقع إلكتروني",
+    "أفضل شركة تصميم مواقع",
+    "أفضل شركة تطوير مواقع",
+    "كيفية إنشاء موقع للشركة",
+    "تصميم موقع احترافي للشركات",
+
+    // Technologies
     "Next.js",
     "React",
     "TypeScript",
@@ -51,5 +149,45 @@ export const keywordsLayoutArray = {
     "TypeScript development",
     "Next.js developer",
     "React developer",
+
+    // Agency keywords
+    "web development agency",
+    "website development agency",
+    "web design agency",
+
+    // Specialized agencies
+    "Next.js development agency",
+    "React development agency",
+    "full-stack web development agency",
+    "business website development agency",
+    "business web development agency",
+
+    // Arabic & English development
+    "Arabic and English website development",
+    "Arabic & English website development",
+    "bilingual website development",
+    "Arabic website development",
+    "English website development",
+
+    // Projects / case studies
+    "web development projects",
+    "web development portfolio",
+    "website development case studies",
+    "web development case studies",
+
+    // Client search intent
+    "how much does a website cost",
+    "how much does website development cost",
+    "how much does a business website cost",
+    "how to build a business website",
+    "best web development agency",
+    "affordable web development agency",
+    "web development agency for small businesses",
+    "professional web development agency",
+
+    // Technologies
+    "Next.js",
+    "React",
+    "TypeScript",
   ],
 };

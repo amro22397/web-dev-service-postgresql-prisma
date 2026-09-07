@@ -1,7 +1,10 @@
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 
 const HeroImage = () => {
+  const homePage = useTranslations('HomePage')
+
   return (
     <div className="flex items-start justify-center w-full lg:w-1/2">
                 <div className="">
@@ -11,7 +14,7 @@ const HeroImage = () => {
                     width="350"
                     height="617"
                     className={"object-cover block dark:hidden"}
-                    alt="Hero Illustration"
+                    alt={homePage('heroImageAlt')}
                     loading="eager"
                     placeholder="blur"
                   />
@@ -24,7 +27,7 @@ const HeroImage = () => {
                     width="400"
                     height="617"
                     className={"object-cover hidden dark:block mb-14"}
-                    alt="Hero Illustration"
+                    alt={homePage('heroImageAlt')}
                     loading="eager"
                     placeholder="blur"
                   />
