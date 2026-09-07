@@ -2,44 +2,46 @@
 
 import { Container } from "../../components/Container";
 import { Hero } from "../../components/Hero";
-import { SectionTitle } from "../../components/SectionTitle";
-import { Benefits } from "../../components/Benefits";
-import { Video } from "../../components/Video";
-import { Testimonials } from "../../components/Testimonials";
-import { Faq } from "../../components/Faq";
-import { Cta } from "../../components/Cta";
-import { benefitOne, benefitTwo } from "../../components/data";
+import Link from "next/link";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Home() {
+  const locale = useLocale();
+  const homePage = useTranslations("HomePage");
+
   return (
     <Container>
       <Hero />
-      <div className="hidden">
-        <SectionTitle preTitle="Nextly Benefits" title=" Why should you use this landing page">
-          Nextly is a free landing page & marketing website template for startups and indie projects. Its built with Next.js & TailwindCSS. And its completely open-source.
-        </SectionTitle>
-      </div>
-      <div className="hidden">
-        <Benefits data={benefitOne} />
-        <Benefits imgPos="right" data={benefitTwo} />
-      </div>
-      <div className="hidden">
-        <SectionTitle preTitle="Watch a video" title="Learn how to fullfil your needs">
-          This section is to highlight a promo or demo video of your product. Analysts says a landing page with video has 3% more conversion rate. So, don&apos;t forget to add one. Just like this.
-        </SectionTitle>
-        <Video videoId="fZ0D0cnR88E" />
-      </div>
-      <div className="hidden">
-        <SectionTitle preTitle="Testimonials" title="Here's what our customers said">
-          Testimonials is a great way to increase the brand trust and awareness. Use this section to highlight your popular customers.
-        </SectionTitle>
-        <Testimonials />
-        <SectionTitle preTitle="FAQ" title="Frequently Asked Questions">
-          Answer your customers possible questions here, it will increase the conversion rate as well as support or chat requests.
-        </SectionTitle>
-        <Faq />
-        <Cta />
-      </div>
+
+      <section className="py-12 lg:py-16" aria-labelledby="website-development-services">
+        <h2 id="website-development-services" className="text-3xl font-bold text-gray-800 dark:text-gray-100">
+          {homePage("servicesTitle")}
+        </h2>
+        <p className="mt-4 max-w-4xl text-lg leading-8 text-gray-600 dark:text-gray-300">
+          {homePage("servicesDescription")}
+        </p>
+        <Link
+          href={`/${locale}/services`}
+          className="mt-6 inline-flex font-semibold text-blue-600 hover:underline dark:text-blue-400"
+        >
+          {homePage("servicesLink")}
+        </Link>
+      </section>
+
+      <section className="py-12 lg:py-16" aria-labelledby="custom-website-development">
+        <h2 id="custom-website-development" className="text-3xl font-bold text-gray-800 dark:text-gray-100">
+          {homePage("customDevelopmentTitle")}
+        </h2>
+        <p className="mt-4 max-w-4xl text-lg leading-8 text-gray-600 dark:text-gray-300">
+          {homePage("customDevelopmentDescription")}
+        </p>
+        <Link
+          href={`/${locale}/projects`}
+          className="mt-6 inline-flex font-semibold text-blue-600 hover:underline dark:text-blue-400"
+        >
+          {homePage("projectsLink")}
+        </Link>
+      </section>
     </Container>
   );
 }

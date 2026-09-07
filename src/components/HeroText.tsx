@@ -30,7 +30,7 @@ const HeroText = () => {
               <button
                 rel="noopener"
                 onClick={requestFormOnClick}
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-blue-600 rounded-md
+                className="cursor-pointer px-8 py-4 text-lg font-medium text-center text-white bg-blue-600 rounded-md
                 hover:bg-blue-600/95 active:bg-blue-600 ">
                 {homePage("requestBuilding")}
               </button>

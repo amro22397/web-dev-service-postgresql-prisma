@@ -1,8 +1,15 @@
 {
     "HomePage": {
-      "title": "Build a website as the client need",
-      "desc": "This is a service for designing different websites for your business. We can deliver it as you want and make a full responsive web application.",
-      "requestBuilding": "Request building your website",
+      "title": "Web Development Agency for Modern Businesses",
+      "desc": "We provide website design and custom website development that turns your goals into fast, responsive, and dependable digital experiences.",
+      "requestBuilding": "Request your website",
+      "heroImageAlt": "Custom business website development by amro97 web development agency",
+      "servicesTitle": "Website Development Services Built Around Your Business",
+      "servicesDescription": "From focused business website development to complete web applications, our web development services combine thoughtful website design, accessible interfaces, reliable backend systems, and responsive performance.",
+      "servicesLink": "Explore our web development services",
+      "customDevelopmentTitle": "Custom Full-Stack Web Development with Next.js and React",
+      "customDevelopmentDescription": "As a Next.js development agency and React development agency, we create scalable, maintainable solutions tailored to your customers, workflows, and long-term growth.",
+      "projectsLink": "View our website development projects",
        "Advertising and Promotion": "Advertising and Promotion",
       "Whatsapp": "Whatsapp",
       "Email": "Email",

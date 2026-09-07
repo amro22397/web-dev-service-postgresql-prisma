@@ -9,20 +9,16 @@ import type { Metadata } from "next";
 //   const { locale } = await params;
 
 //   return {
-//     metadataBase: new URL("https://www.wds-oman.com"),
-
 //     title: {
-//       absolute: locale === "ar" ? "خدمة تطوير الويب في عُمان" : "Web Dev Service Oman",
+//       absolute:
+//         locale === "ar"
+//           ? "amro97 Team | وكالة تطوير مواقع وخدمات تصميم مواقع"
+//           : "amro97 Team | Web Development Agency & Website Design",
 //     },
-
 //     description:
 //       locale === "ar"
-//         ? "خدمات احترافية لتصميم وتطوير المواقع والتطبيقات في عُمان، تشمل حلول الواجهة الأمامية والتطوير المتكامل للأعمال."
-//         : "Professional website and application design and development services in Oman, including frontend and full-stack solutions for businesses.",
-
-//     twitter: {
-//       card: "summary_large_image",
-//     },
+//         ? "وكالة تطوير مواقع تقدم تصميم المواقع، وتطوير مواقع الأعمال، وحلول React وNext.js المتكاملة والمخصصة لمساعدة الشركات على النمو."
+//         : "A web development agency providing website design, business website development, and custom full-stack React and Next.js development services.",
 //   };
 // }
 
